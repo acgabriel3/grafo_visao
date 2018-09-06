@@ -1,11 +1,13 @@
-#ifndef ___ESTRUTURA_HPP__
+//#ifndef ___ESTRUTURA_HPP__
 #define ___ESTRUTURA_HPP__
 
 #include <iostream>
-#include<vector>
+#include <vector>
 #include <string>
 #include <exception>
 #include <stdexcept>
+
+using namespace std;
 
 /**
  * @brief Representa o vertice de um grafo, como tambem todos os vertices adjascentes a este.
@@ -24,7 +26,7 @@ class Vertice {
         string nome;
         int id;
         //Essa representacao eh a melhor? Pensar a respeito e pesquisar
-        vector<*Vertice> adjascentes;
+        vector<Vertice*> adjascentes;
 
     public:
 
@@ -34,6 +36,8 @@ class Vertice {
 
         int get_id();
         void set_id();
+
+        vector<Vertice*> get_adjascentes();
 
         //metodos gerais
         int CoefAglomeracao(); //pergunta eh possivel calcular o coeficiente de aglomeracao apenas com os dados aqui presentes
@@ -56,7 +60,7 @@ class Grafo {
     private:
 
         string nome;
-        vector<*Vertice> vertices;
+        vector<Vertice*> vertices;
 
     public:
 
@@ -64,7 +68,7 @@ class Grafo {
         string get_nome();
         void set_nome();
 
-        vector<*Vertice> get_vertices();
+        vector<Vertice*> get_vertices();
 
         //getters e setters especificos
         void adcionaVertice(Vertice *vertice);
