@@ -32,7 +32,7 @@ class Vertice {
 
         //getters e setters
         string get_nome();
-        void set_nome();
+        void set_nome(string);
 
         int get_id();
         void set_id();

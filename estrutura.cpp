@@ -17,3 +17,23 @@ int Vertice::get_id() {
     return this->id;
 
 }
+
+void Vertice::set_id(int id) {
+
+    this->id = id;
+
+}
+
+
+vector<Vertice*> Vertice::get_adjascentes() {
+
+    return this->adjascentes;
+
+}
+
+
+void Vertice::AdicionaAdj(Vertice* vertice) {
+
+    this->adjascentes.push_back(vertice);
+
+}
