@@ -1,4 +1,4 @@
-//#ifndef ___ESTRUTURA_HPP__
+#ifndef ___ESTRUTURA_HPP__
 #define ___ESTRUTURA_HPP__
 
 #include <iostream>
@@ -17,7 +17,7 @@ using namespace std;
 
 //OBS: TALVEZ NESTE TRABALHO NAO SEJA NECESSARIO EXCLUIR VERTICES, NEM MANIPULAR A ESTRUTURA DOS GRAFOS, MAS TALVEZ USEMOS ELE COMO BASE PARA OS PROXIMOS
 
-//problemas dessa forma de representacao:
+//  Problemas dessa forma de representacao:
 //- Teremos de adcionar de dois a dois nas listas de adjascencia de cada vertice, isso eh dificil gerenciar
 class Vertice {
 
@@ -53,7 +53,7 @@ class Vertice {
  */
 
 
-//problemas dessa forma de representacao:
+//  Problemas dessa forma de representacao:
 //- Ao excluir um vertice, deveremos excluir o mesmo de todas as listas de adjacencia que ele possui.
 class Grafo {
 
