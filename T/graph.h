@@ -15,7 +15,7 @@ class Graph {
         static bool cmp(vector<int> a, vector<int> b) {
             return a.size() > b.size();
         }
-        void bron_kerbosh(vector<int> r, vector<int> p, vector<int> x) {
+        void bron_kerbosh(vector<int> r, vector<int> p, vector<int> x) {            
             if(p.empty() && x.empty()) {
                 cliques.push_back(r);
             }
@@ -31,9 +31,9 @@ class Graph {
             }
 
             for(int i = 0; i < p.size(); i++) {
-                r.push_back(p[i]);
-
                 vector<int> p_next, x_next;
+                
+                r.push_back(p[i]);
 
                 for(int j = 0; j < graph[p[i]].size(); j++) {
                     if(mark_p[graph[p[i]][j]]) {
