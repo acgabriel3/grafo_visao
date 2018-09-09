@@ -1,11 +1,5 @@
-#ifndef ___ESTRUTURA_HPP__
+//#ifndef ___ESTRUTURA_HPP__
 #define ___ESTRUTURA_HPP__
-
-#include <iostream>
-#include <vector>
-#include <string>
-#include <exception>
-#include <stdexcept>
 
 using namespace std;
 
@@ -26,7 +20,8 @@ class Vertice {
         string nome;
         int id;
         //Essa representacao eh a melhor? Pensar a respeito e pesquisar
-        vector<Vertice*> adjascentes;
+        vector<Vertice> adjascentes;
+        bool visitado = false;
 
     public:
 
@@ -35,14 +30,17 @@ class Vertice {
         void set_nome(string);
 
         int get_id();
-        void set_id();
+        void set_id(int);
 
-        vector<Vertice*> get_adjascentes();
+        vector<Vertice> get_adjascentes();
+
+        bool get_visitado();
+        void set_visitado(bool);
 
         //metodos gerais
         int CoefAglomeracao(); //pergunta eh possivel calcular o coeficiente de aglomeracao apenas com os dados aqui presentes
         int Grau();
-        void AdicionaAdj(Vertice vertice);
+        void AdicionaAdj(Vertice&);
 
 };
 
@@ -60,7 +58,7 @@ class Grafo {
     private:
 
         string nome;
-        vector<Vertice*> vertices;
+        vector<Vertice> vertices;
 
     public:
 
@@ -68,11 +66,14 @@ class Grafo {
         string get_nome();
         void set_nome();
 
-        vector<Vertice*> get_vertices();
+        vector<Vertice> get_vertices();
 
         //getters e setters especificos
-        void adcionaVertice(Vertice *vertice);
-        void retiraVertice(Vertice *vertice);
+        void adcionaVertice(Vertice&);
+        void retiraVertice(Vertice&);
+
+        //metodos de leitura:
+        bool leGml();
 
         //metodos gerais
         int coefAglomeracaoMedio();
