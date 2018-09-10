@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-#include "graph.h"
+#include "graph.c"
 #include "parser.h"
 
 using namespace std;
@@ -13,7 +13,7 @@ int main() {
 
     graph.show_vertices();
     graph.show_cliques();
-    graph.coefGrafo();
+    graph.coefGraph();
 
     return 0;
 }
