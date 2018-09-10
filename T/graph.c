@@ -117,7 +117,7 @@ void Graph::coefGraph() {
 
             for(int i = 1; i < graph.size(); i++) {
                  aux = this->coefVertex(i);
-                 cout << "coeficiente de aglomeracao vertice " << i << ":" << aux << endl;
+                 cout << "coeficiente de aglomeracao vertice " << i << ": " << aux << endl;
                  coefGraph += aux;
             }
 
