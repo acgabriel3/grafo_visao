@@ -13,6 +13,7 @@ int main() {
 
     graph.show_vertices();
     graph.show_cliques();
+    graph.coefGrafo();
 
     return 0;
 }
