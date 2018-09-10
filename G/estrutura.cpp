@@ -90,14 +90,13 @@ void Grafo::criaLigacao(int a, int b) {
         }
     }
 
-    //verticeA.set_adjascente(verticeA);
-    //verticeB.set_adjascente(verticeB);
-
     if(aAdc){
+        verticeA.set_adjascente(verticeB);
         this->adicionaVertice(verticeA);
     }
 
     if(bAdc) {
+        verticeB.set_adjascente(verticeA);
         this->adicionaVertice(verticeB);
     }
 
