@@ -119,16 +119,26 @@ class Graph {
             long double coefVertice = -1;
 
             for(auto triangulo : triangulos) {
-                for(int i = 1; i < triangulo.size(); i++) {
-                        if(triangulo[i] == vertice) {
-                            arestasTrian += 2;
-                        }
-                }
+
+                    for(int i = 0; i < triangulo.size(); i++) {
+                            if(triangulo[i] == vertice) {
+                                arestasTrian++;
+                            }
+                    }
             }
 
-            coefVertice = (2.0f* (long double) arestasTrian);
-            coefVertice = coefVertice/((long double) graph[vertice].size());
-            coefVertice = coefVertice/( (long double) graph[vertice].size() - 1.0f);
+
+            if(graph[vertice].size() == 1) {
+
+                coefVertice = 0;
+
+            } else {
+
+                coefVertice = (2.0f* (long double) arestasTrian);
+                coefVertice = coefVertice/((long double) graph[vertice].size());
+                coefVertice = coefVertice/( (long double) graph[vertice].size() - 1.0f);
+
+            }
 
             return coefVertice;
 
