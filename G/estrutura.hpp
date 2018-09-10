@@ -1,5 +1,7 @@
-//#ifndef ___ESTRUTURA_HPP__
-#define ___ESTRUTURA_HPP__
+#ifndef ESTRUTURA_HPP
+#define ESTRUTURA_HPP
+
+#include "bits/stdc++.h"
 
 using namespace std;
 
@@ -37,6 +39,8 @@ class Vertice {
         bool get_visitado();
         void set_visitado(bool);
 
+        void set_adjascente(Vertice&);
+
         //metodos gerais
         int CoefAglomeracao(); //pergunta eh possivel calcular o coeficiente de aglomeracao apenas com os dados aqui presentes
         int Grau();
@@ -69,14 +73,17 @@ class Grafo {
         vector<Vertice> get_vertices();
 
         //getters e setters especificos
-        void adcionaVertice(Vertice&);
+        void adicionaVertice(Vertice&);
         void retiraVertice(Vertice&);
 
         //metodos de leitura:
         bool leGml();
+        void criaLigacao(int a, int b);
 
         //metodos gerais
         int coefAglomeracaoMedio();
         void cliquesMaximais(); //pensar em valor de retorno e tambem em entrada, pois provavelmente vai sair em arquivo texto
         void grauGeralVertices(); //pensar em valor de retorno e tambem em entrada, pois provavelmente vai sair em arquivo texto
 };
+
+#endif // ESTRUTURA_HPP

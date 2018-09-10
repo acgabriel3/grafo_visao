@@ -4,6 +4,8 @@
 
 #define KARATE "karate.gml"
 
+
+//*******************************************************Metodos da classe Vertice***************************************************
 string Vertice::get_nome() {
 
     return this->nome;
@@ -37,10 +39,67 @@ vector<Vertice> Vertice::get_adjascentes() {
 
 }
 
+void Vertice::set_adjascente(Vertice &vertice){
+
+    this->adjascentes.push_back(vertice);
+
+}
+
 
 void Vertice::AdicionaAdj(Vertice &vertice) {
 
     this->adjascentes.push_back(vertice);
+
+}
+
+//*******************************************************Metodos da classe Grafo***************************************************
+
+vector<Vertice> Grafo::get_vertices() {
+
+return this->vertices;
+
+}
+
+void Grafo::adicionaVertice(Vertice &vertice){
+
+this->vertices.push_back(vertice);
+
+}
+
+void Grafo::criaLigacao(int a, int b) {
+
+    Vertice verticeA;
+    Vertice verticeB;
+
+    verticeA.set_id(a);
+    verticeB.set_id(b);
+
+    bool aAdc = true;
+    bool bAdc = true;
+
+    for(int i = 0; i < this->vertices.size(); i++) {
+
+        if(this->vertices[i].get_id() == a) {
+            this->vertices[i].set_adjascente(verticeB);
+            aAdc = false;
+        }
+
+        if(this->vertices[i].get_id() == b) {
+            this->vertices[i].set_adjascente(verticeA);
+            bAdc = false;
+        }
+    }
+
+    //verticeA.set_adjascente(verticeA);
+    //verticeB.set_adjascente(verticeB);
+
+    if(aAdc){
+        this->adicionaVertice(verticeA);
+    }
+
+    if(bAdc) {
+        this->adicionaVertice(verticeB);
+    }
 
 }
 
@@ -65,7 +124,7 @@ bool Grafo::leGml () {
             file >> target;
             int b = stof(target);
 
-            //graph.make_path(a, b);
+            this->criaLigacao(a, b);
         }
     }
     return true;
