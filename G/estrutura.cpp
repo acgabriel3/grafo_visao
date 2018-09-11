@@ -128,3 +128,26 @@ bool Grafo::leGml () {
     }
     return true;
 }
+
+void Grafo::bron_kerbosh(vector<Vertice> cadidatos,
+                                             vector<Vertice> pertencentes,
+                                             vector<Vertice> naoPertencentes)) {
+
+
+    if(cadidatos.empty() && naoPertencentes.empty()) {
+        //Temos um clique, que seria o pertencentes
+        cliquesMaximais.push_back(pertencentes);
+    }
+
+    for(auto vertice : candidatos) {
+
+        if(!vertice.get_visitado()) {
+            vertice.set_visitado(true);
+            pertencentes.push_back(vertice);
+            candidatos = vertice.get_adjascentes();
+
+        }
+
+    }
+
+}

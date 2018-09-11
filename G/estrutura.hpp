@@ -63,6 +63,7 @@ class Grafo {
 
         string nome;
         vector<Vertice> vertices;
+        vector<vector<Vertice>> cliquesMaximais;
 
     public:
 
@@ -81,9 +82,11 @@ class Grafo {
         void criaLigacao(int a, int b);
 
         //metodos gerais
+        void grauGeralVertices();
         int coefAglomeracaoMedio();
-        void cliquesMaximais(); //pensar em valor de retorno e tambem em entrada, pois provavelmente vai sair em arquivo texto
-        void grauGeralVertices(); //pensar em valor de retorno e tambem em entrada, pois provavelmente vai sair em arquivo texto
+        void bron_kerbosh(vector<Vertice> cadidatos,
+                                             vector<Vertice> pertencentes,
+                                             vector<Vertice> naoPertencentes);
 };
 
 #endif // ESTRUTURA_HPP

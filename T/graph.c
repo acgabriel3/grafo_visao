@@ -65,30 +65,66 @@ void Graph::show_cliques() {
 
 }
 
+int Graph::fatorial(int n) {
+
+    int result = n;
+
+    for(int i = n - 1; i > 0; i--){
+        result = result * i;
+    }
+
+    return result;
+}
+
+int Graph::trianglesInClique(int cliqueSize) {
+
+    int n = cliqueSize - 1;
+    int nFatorial = this->fatorial(n);
+    int twoFatorial = 2;
+    int nLessTwoFatorial = this->fatorial(n - 2);
+    int result = (nFatorial/(twoFatorial * nLessTwoFatorial));
+
+    return result;
+
+}
+
 long double Graph::coefVertex(int vertex) {
 
-    vector<vector<int>> triangles;
+    vector<vector<int>> cliquesMax;
 
             for(auto clique : cliques) {
 
-                if(clique.size() == 3) {
+                if(clique.size() > 2) {
 
-                    triangles.push_back(clique);
+                    cliquesMax.push_back(clique);
 
                 }
 
             }
 
-            int edgesTrian = 0;
+            int triangles = 0;
+            bool vertexInClique = false;
             long double coefVertex = -1;
+            int sizeClique = 0;
 
-            for(auto triangle : triangles) {
+            for(auto clique : cliquesMax) {
 
-                    for(int i = 0; i < triangle.size(); i++) {
-                            if(triangle[i] == vertex) {
-                                edgesTrian++;
+                    sizeClique = clique.size();
+
+                    for(int i = 0; i < sizeClique; i++) {
+                            if(clique[i] == vertex) {
+                                vertexInClique = true;
                             }
                     }
+
+                    if(sizeClique == 3 && vertexInClique) {
+                        triangles++;
+                    } else if(sizeClique > 3 && vertexInClique) {
+                        int trianglesInClique = this->trianglesInClique(sizeClique);
+                        triangles = triangles + trianglesInClique;
+                    }
+
+                    vertexInClique = false;
             }
 
 
@@ -98,7 +134,7 @@ long double Graph::coefVertex(int vertex) {
 
             } else {
 
-                coefVertex = (2.0f* (long double) edgesTrian);
+                coefVertex = (2.0f* (long double) triangles);
                 coefVertex = coefVertex/((long double) graph[vertex].size());
                 coefVertex = coefVertex/( (long double) graph[vertex].size() - 1.0f);
 

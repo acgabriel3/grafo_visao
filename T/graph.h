@@ -124,6 +124,9 @@ class Graph {
      * Este metodo utiliza o metodo "coefVertex" em sua implementacao
      */
         void coefGraph();
+
+        int fatorial(int n);
+        int trianglesInClique(int sizeClique);
 };
 
 #endif
