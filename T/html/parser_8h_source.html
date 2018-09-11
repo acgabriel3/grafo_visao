@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto 1: Código-Fonte de parser.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto 1
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">parser.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="parser_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PARSER_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PARSER_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;bits/stdc++.h&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="graph_8h.html">graph.h</a>&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="parser_8h.html#ae670f464aa30ccece0349204e949f3cb">   21</a></span>&#160;<span class="preprocessor">#define KARATE &quot;karate.gml&quot;</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="parser_8h.html#ac613e2a7681609bf7f3bdec958a874bf">   26</a></span>&#160;<span class="preprocessor">#define INTEGRANTES 34</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="class_graph.html">Graph</a> <a class="code" href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a>(<a class="code" href="parser_8h.html#ac613e2a7681609bf7f3bdec958a874bf">INTEGRANTES</a>);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="parser_8h.html#af816873151ddb0126e98bb2f914d8ed5">   43</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="parser_8h.html#af816873151ddb0126e98bb2f914d8ed5">read</a>() {</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    fstream file;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    file.open(<a class="code" href="parser_8h.html#ae670f464aa30ccece0349204e949f3cb">KARATE</a>);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span>(!file) {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Falha ao abrir arquivo&quot;</span> &lt;&lt; endl;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">string</span> line, source, target;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">while</span>(file &gt;&gt; line) {</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span>(line == <span class="stringliteral">&quot;edge&quot;</span>) {</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">while</span>(file &gt;&gt; line &amp;&amp; line != <span class="stringliteral">&quot;source&quot;</span>);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            file &gt;&gt; source;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordtype">int</span> a = stof(source);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">while</span>(file &gt;&gt; line &amp;&amp; line != <span class="stringliteral">&quot;target&quot;</span>);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            file &gt;&gt; target;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordtype">int</span> b = stof(target);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a>.<a class="code" href="class_graph.html#a50600319bb4ce1fb5c943a20fd700faf">make_path</a>(a, b);</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="parser_8h_html_af816873151ddb0126e98bb2f914d8ed5"><div class="ttname"><a href="parser_8h.html#af816873151ddb0126e98bb2f914d8ed5">read</a></div><div class="ttdeci">bool read()</div><div class="ttdoc">Lê os dados presentes no arquivo karate.gml e armazena as relações entre os integrantes do clube de k...</div><div class="ttdef"><b>Definition:</b> parser.h:43</div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="class_graph_html_a50600319bb4ce1fb5c943a20fd700faf"><div class="ttname"><a href="class_graph.html#a50600319bb4ce1fb5c943a20fd700faf">Graph::make_path</a></div><div class="ttdeci">void make_path(int a, int b)</div><div class="ttdoc">Armazena uma aresta na memoria, quando da leitura de parser. </div><div class="ttdef"><b>Definition:</b> graph.h:75</div></div>
+<div class="ttc" id="class_graph_html"><div class="ttname"><a href="class_graph.html">Graph</a></div><div class="ttdoc">classe abstrata com o intuito de representar um grafo por meio de uma lista de adjacencia ...</div><div class="ttdef"><b>Definition:</b> graph.h:37</div></div>
+<div class="ttc" id="parser_8h_html_a6771aaf60fae02fda3d0e1ee5ddb4950"><div class="ttname"><a href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a></div><div class="ttdeci">Graph graph(INTEGRANTES)</div><div class="ttdoc">Objeto da classe grafo que será utilizado para representar as relações entre os membros do grupo de k...</div></div>
+<div class="ttc" id="parser_8h_html_ae670f464aa30ccece0349204e949f3cb"><div class="ttname"><a href="parser_8h.html#ae670f464aa30ccece0349204e949f3cb">KARATE</a></div><div class="ttdeci">#define KARATE</div><div class="ttdoc">Define o nome do arquivo onde estão os dados que serão recebidos. </div><div class="ttdef"><b>Definition:</b> parser.h:21</div></div>
+<div class="ttc" id="graph_8h_html"><div class="ttname"><a href="graph_8h.html">graph.h</a></div><div class="ttdoc">Descricao acerca da classe Graph, acerca de sua estrutura e m�todos. </div></div>
+<div class="ttc" id="parser_8h_html_ac613e2a7681609bf7f3bdec958a874bf"><div class="ttname"><a href="parser_8h.html#ac613e2a7681609bf7f3bdec958a874bf">INTEGRANTES</a></div><div class="ttdeci">#define INTEGRANTES</div><div class="ttdoc">Define a quantidade de integrantes do grupo de karate, representados por vértices no grafo...</div><div class="ttdef"><b>Definition:</b> parser.h:26</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

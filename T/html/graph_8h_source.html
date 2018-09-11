@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto 1: Código-Fonte de graph.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto 1
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">graph.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="graph_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GRAPH_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GRAPH_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;bits/stdc++.h&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_graph.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_graph.html">Graph</a> {</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        vector&lt;vector&lt;int&gt;&gt; <a class="code" href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a>;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        vector&lt;vector&lt;int&gt;&gt; cliques;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> cmp(vector&lt;int&gt; a, vector&lt;int&gt; b) {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">return</span> a.size() &gt; b.size();</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        };</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">int</span> size() {</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a>.size();</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="class_graph.html">Graph</a>() {}</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="class_graph.html">Graph</a>(<span class="keywordtype">int</span> n) : <a class="code" href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a>(n + 1) {}</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> bron_kerbosh(vector&lt;int&gt; r, vector&lt;int&gt; p, vector&lt;int&gt; x);</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_graph.html#a50600319bb4ce1fb5c943a20fd700faf">   75</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_graph.html#a50600319bb4ce1fb5c943a20fd700faf">make_path</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) {</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a>[a].push_back(b);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a>[b].push_back(a);</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div><div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_graph.html#a65b3558205137748c0e8e8c623a708c5">   86</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_graph.html#a65b3558205137748c0e8e8c623a708c5">has_path</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) {</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">return</span> find(<a class="code" href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a>[a].begin(), <a class="code" href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a>[a].end(), b) != <a class="code" href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a>[a].end();</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div><div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_graph.html#a206a171fcac81cd70e1811b807786c79">   94</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_graph.html#a206a171fcac81cd70e1811b807786c79">degree</a>(<span class="keywordtype">int</span> v) {</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a>[v].size();</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div><div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_graph.html#a8c0664314701aa41aa3e863999c43f96">  101</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_graph.html#a8c0664314701aa41aa3e863999c43f96">show_vertices</a>() {</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;\n\tVERTICES\n\n&quot;</span>;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; <a class="code" href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a>.size(); i++) {</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;Vertice: &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;\tGrau: &quot;</span> &lt;&lt; degree(i) &lt;&lt; endl;</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            }</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">void</span> show_cliques();</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordtype">long</span> <span class="keywordtype">double</span> coefVertex(<span class="keywordtype">int</span> vertex);</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">void</span> coefGraph();</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">int</span> fatorial(<span class="keywordtype">int</span> n);</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordtype">int</span> trianglesInClique(<span class="keywordtype">int</span> sizeClique);</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;};</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_graph_html_a206a171fcac81cd70e1811b807786c79"><div class="ttname"><a href="class_graph.html#a206a171fcac81cd70e1811b807786c79">Graph::degree</a></div><div class="ttdeci">int degree(int v)</div><div class="ttdoc">Calcula o grau de um vertice. </div><div class="ttdef"><b>Definition:</b> graph.h:94</div></div>
+<div class="ttc" id="class_graph_html_a65b3558205137748c0e8e8c623a708c5"><div class="ttname"><a href="class_graph.html#a65b3558205137748c0e8e8c623a708c5">Graph::has_path</a></div><div class="ttdeci">bool has_path(int a, int b)</div><div class="ttdoc">Indica se ha um caminho entre dois vertices. </div><div class="ttdef"><b>Definition:</b> graph.h:86</div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="class_graph_html_a50600319bb4ce1fb5c943a20fd700faf"><div class="ttname"><a href="class_graph.html#a50600319bb4ce1fb5c943a20fd700faf">Graph::make_path</a></div><div class="ttdeci">void make_path(int a, int b)</div><div class="ttdoc">Armazena uma aresta na memoria, quando da leitura de parser. </div><div class="ttdef"><b>Definition:</b> graph.h:75</div></div>
+<div class="ttc" id="class_graph_html"><div class="ttname"><a href="class_graph.html">Graph</a></div><div class="ttdoc">classe abstrata com o intuito de representar um grafo por meio de uma lista de adjacencia ...</div><div class="ttdef"><b>Definition:</b> graph.h:37</div></div>
+<div class="ttc" id="parser_8h_html_a6771aaf60fae02fda3d0e1ee5ddb4950"><div class="ttname"><a href="parser_8h.html#a6771aaf60fae02fda3d0e1ee5ddb4950">graph</a></div><div class="ttdeci">Graph graph(INTEGRANTES)</div><div class="ttdoc">Objeto da classe grafo que será utilizado para representar as relações entre os membros do grupo de k...</div></div>
+<div class="ttc" id="class_graph_html_a8c0664314701aa41aa3e863999c43f96"><div class="ttname"><a href="class_graph.html#a8c0664314701aa41aa3e863999c43f96">Graph::show_vertices</a></div><div class="ttdeci">void show_vertices()</div><div class="ttdoc">Mostra os vertices presentes no grafo. </div><div class="ttdef"><b>Definition:</b> graph.h:101</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>
