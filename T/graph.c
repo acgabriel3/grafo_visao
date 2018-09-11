@@ -90,7 +90,7 @@ int Graph::trianglesInClique(int cliqueSize) {
 
 long double Graph::coefVertex(int vertex) {
 
-    vector<vector<int>> cliquesMax;
+    /* vector<vector<int>> cliquesMax;
 
             for(auto clique : cliques) {
 
@@ -142,6 +142,43 @@ long double Graph::coefVertex(int vertex) {
 
             return coefVertex;
 
+            */
+
+    int triangles = 0;
+
+   vector<int> adjascentes = graph[vertex];
+
+   vector<int> adjPosterior;
+
+   for(int i = 0; i < adjascentes.size(); i++) {
+
+        for(int j = i + 1; j < adjascentes.size(); j++) {
+            adjPosterior = graph[adjascentes[j]];
+                for(auto vertexAdj : adjPosterior) {
+                    if(adjascentes[i] == vertexAdj) {
+                        triangles++;
+                    }
+                }
+        }
+
+   }
+
+    long double coefVertex = 0;
+
+    if(graph[vertex].size() == 1) {
+
+        coefVertex = 0;
+
+    } else {
+
+        coefVertex = (2.0f* (long double) triangles);
+        coefVertex = coefVertex/((long double) graph[vertex].size());
+        coefVertex = coefVertex/( (long double) graph[vertex].size() - 1.0f);
+
+    }
+
+   return coefVertex;
+
 }
 
 void Graph::coefGraph() {
@@ -157,7 +194,7 @@ void Graph::coefGraph() {
                  coefGraph += aux;
             }
 
-            coefGraph = coefGraph/graph.size();
+            coefGraph = coefGraph/(graph.size() - 1);
 
             cout << "coeficiente medio de aglomeracao do grafo: " << coefGraph << endl;
 
