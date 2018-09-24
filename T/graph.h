@@ -11,9 +11,9 @@ using namespace std;
  * @author Gabriel Alves Castro
  * @date 09 de setembro de 2018
  *
- * @brief Descricao acerca da classe Graph, acerca de sua estrutura e métodos.
+ * @brief Descricao acerca da classe Graph, acerca de sua estrutura e mï¿½todos.
  *
- * A classe Graph eh o menor nível de abstracao abordado nesse projeto. A sua funcionalidade eh representar
+ * A classe Graph eh o menor nï¿½vel de abstracao abordado nesse projeto. A sua funcionalidade eh representar
  * um grafo no sentido da abstracao matematica de "grafos", por meio de uma lista de adjacencia. Deste modo,
  * todos os seus metodos referem-se a implementacao das medidas disponiveis na literatura de grafos. Sendo que
  * nessa versao 1.0 existem apenas algumas medidas implementadas.

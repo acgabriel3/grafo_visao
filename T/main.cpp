@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-#include "graph.c"
+#include "graph.h"
 #include "parser.h"
 
 using namespace std;
