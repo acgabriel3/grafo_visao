@@ -56,7 +56,13 @@ void Vertice::AdicionaAdj(Vertice &vertice) {
 
 vector<Vertice> Grafo::get_vertices() {
 
-return this->vertices;
+    return this->vertices;
+
+}
+
+vector<vector<Vertice>> Grafo::get_cliques() {
+
+    return this->cliquesMaximais;
 
 }
 
@@ -129,25 +135,41 @@ bool Grafo::leGml () {
     return true;
 }
 
-void Grafo::bron_kerbosh(vector<Vertice> cadidatos,
-                                             vector<Vertice> pertencentes,
-                                             vector<Vertice> naoPertencentes)) {
+vector<Vertice> Grafo::intersecao(vector<Vertice> candidatos, vector<Vertice> adjascentes) {
+
+    vector<Vertice> intersecao;
+
+    for(auto verticeCan : candidatos) {
+        for(auto verticeAdj : adjascentes) {
+            if(verticeCan.get_id() == verticeAdj.get_id()) {
+                intersecao.push_back(verticeCan);
+            }
+        }
+    }
+
+    return intersecao;
+
+}
 
 
-    if(cadidatos.empty() && naoPertencentes.empty()) {
+void Grafo::bron_kerbosh(vector<Vertice> pertencentes,
+                         vector<Vertice> candidatos,
+                         vector<Vertice> analisados) {
+
+
+    if(candidatos.empty() && analisados.empty()) {
         //Temos um clique, que seria o pertencentes
         cliquesMaximais.push_back(pertencentes);
     }
 
     for(auto vertice : candidatos) {
 
-        if(!vertice.get_visitado()) {
-            vertice.set_visitado(true);
-            pertencentes.push_back(vertice);
-            candidatos = vertice.get_adjascentes();
+        pertencentes.push_back(vertice); //Adicionado toda vez que bron eh chamada
+        candidatos = Grafo.intersecao(candidatos, vertice.get_adjascentes());
+        analisados = Grafo.intersecao(analisados, Vertice.get_adjascentes());
+        Grafo.bron_kerbosh(pertencentes, candidatos, analisados);
+        analisados.push_back(vertice);
 
         }
-
-    }
 
 }

@@ -72,6 +72,7 @@ class Grafo {
         void set_nome();
 
         vector<Vertice> get_vertices();
+        vector<vector<Vertice>> get_cliques();
 
         //getters e setters especificos
         void adicionaVertice(Vertice&);
@@ -84,9 +85,10 @@ class Grafo {
         //metodos gerais
         void grauGeralVertices();
         int coefAglomeracaoMedio();
-        void bron_kerbosh(vector<Vertice> cadidatos,
-                                             vector<Vertice> pertencentes,
-                                             vector<Vertice> naoPertencentes);
+        void bron_kerbosh(vector<Vertice> pertencentes,
+                          vector<Vertice> candidatos,
+                          vector<Vertice> naoPertencentes);
+        vector<Vertice> intersecao(vector<Vertice> candidatos, vector<Vertice> adjascentes);
 };
 
 #endif // ESTRUTURA_HPP
