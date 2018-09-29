@@ -1,0 +1,372 @@
+graph
+[
+  node
+  [
+    id CALCULO 1
+    creditos 6
+    dificuldade 2
+  ]
+  node
+  [
+    id INTRODUCAO AOS SISTEMAS COMPUTACIONAIS
+    creditos 4
+    dificuldade 1
+  ]
+  node
+  [
+    id FUNDAMENTOS TEORICOS DA COMPUTACAO
+    creditos 4
+    dificuldade 3
+  ]
+  node
+  [
+    id ALGORITMOS E PROGRAMACAO DE COMPUTADORES
+    creditos 4
+    dificuldade 1
+  ]
+  node
+  [
+    id INFORMATICA E SOCIEDADE
+    creditos 2
+    dificuldade 2
+  ]
+  node
+  [
+    id CIRCUITOS DIGITAIS
+    creditos 6
+    dificuldade 1
+  ]
+  node
+  [
+    id ESTRUTURAS DE DADOS
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id CALCULO 2
+    creditos 6
+    dificuldade 2
+  ]
+  node
+  [
+    id INTRODUCAO A ALGEBRA LINEAR
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id ORGANIZACAO E ARQUITETURA DE COMPUTADORES
+    creditos 4
+    dificuldade 3
+  ]
+  node
+  [
+    id TECNICAS DE PROGRAMACAO 1
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id ALGEBRA 1
+    creditos 4
+    dificuldade 3
+  ]
+  node
+  [
+    id CALCULO NUMERICO
+    creditos 4
+    dificuldade 1
+  ]
+  node
+  [
+    id PROBABILIDADE E ESTATISTICA
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id LOGICA COMPUTACIONAL 1
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id TECNICAS DE PROGRAMACAO 2
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id ORGANIZACAO DE ARQUIVOS
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id TEORIA E APLICACAO DE GRAFOS
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id REDES DE COMPUTADORES
+    creditos 4
+    dificuldade 3
+  ]
+  node
+  [
+    id LINGUAGENS DE PROGRAMACAO
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id PROGRAMACAO CONCORRENTE
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id ENGENHARIA DE SOFTWARE
+    creditos 4
+    dificuldade 1
+  ]
+  node
+  [
+    id BANCOS DE DADOS
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id INTRODUCAO A INTELIGENCIA ARTIFICIAL
+    creditos 4
+    dificuldade 1
+  ]
+  node
+  [
+    id SOFTWARE BASICO
+    creditos 4
+    dificuldade 3
+  ]
+  node
+  [
+    id FUNDAMENTOS DE SISTEMAS OPERACIONAIS
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id AUTOMATOS E COMPUTABILIDADE
+    creditos 6
+    dificuldade 3
+  ]
+  node
+  [
+    id SISTEMAS DE INFORMACAO
+    creditos 4
+    dificuldade 1
+  ]
+  node
+  [
+    id COMPUTACAO EXPERIMENTAL
+    creditos 4
+    dificuldade 3
+  ]
+  node
+  [
+    id PROJETO E ANALISE DE ALGORITMOS
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id COMPILADORES
+    creditos 4
+    dificuldade 3
+  ]
+  node
+  [
+    id SEGURANÇA COMPUTACIONAL
+    creditos 4
+    dificuldade 2
+  ]
+  node
+  [
+    id METODOLOGIA CIENTIFICA
+    creditos 2
+    dificuldade 1
+  ]
+  node
+  [
+    id TOPICOS AVANCADOS EM COMPUTADORES
+    creditos 6
+    dificuldade 2
+  ]
+  edge
+  [
+      target ESTRUTURAS DE DADOS
+      source ALGORITMOS PROGR COMPUTADORES
+  ]
+  edge
+  [
+      target CALCULO 2
+      source CALCULO 1
+  ]
+  edge
+  [
+      target ORGANIZACAO E ARQUITETURA DE COMPUTADORES
+      source CIRCUITOS DIGITAIS
+  ]
+  edge
+  [
+      target TECNICAS DE PROGRAMACAO 1
+      source ESTRUTURAS DE DADOS
+  ]
+  edge
+  [
+      target CALCULO NUMERICO
+      source CALCULO 2
+  ]
+  edge
+  [
+      target PROBABILIDADE E ESTATISTICA
+      source CALCULO 1
+  ]
+  edge
+  [
+      target LOGICA COMPUTACIONAL 1
+      source FUNDAMENTOS TEOR DA COMPUTACAO
+  ]
+  edge
+  [
+      target TECNICAS DE PROGRAMACAO 2
+      source TECNICAS DE PROGRAMACAO 1
+  ]
+  edge
+  [
+      target ORGANIZACAO DE ARQUIVOS
+      source PROBABILIDADE E ESTATISTICA
+  ]
+  edge
+  [
+      target ORGANIZACAO DE ARQUIVOS
+      source ESTRUTURAS DE DADOS
+  ]
+  edge
+  [
+      target TEORIA E APLICACAO DE GRAFOS
+      source ESTRUTURAS DE DADOS
+  ]
+  edge
+  [
+      target REDES DE COMPUTADORES
+      source ESTRUTURAS DE DADOS
+  ]
+  edge
+  [
+      target REDES DE COMPUTADORES
+      source PROBABILIDADE E ESTATISTICA
+  ]
+  edge
+  [
+      target REDES DE COMPUTADORES
+      source CALCULO 2
+  ]
+  edge
+  [
+      target LINGUAGENS DE PROGRAMACAO
+      source ESTRUTURAS DE DADOS
+  ]
+  edge
+  [
+      target PROGRAMACAO CONCORRENTE
+      source TECNICAS DE PROGRAMACAO 2
+  ]
+  edge
+  [
+      target PROGRAMACAO CONCORRENTE
+      source ORGANIZACAO E ARQUITETURA DE COMPUTADORES
+  ]
+  edge
+  [
+      target ENGENHARIA DE SOFTWARE
+      source TECNICAS DE PROGRAMACAO 1
+  ]
+  edge
+  [
+      target BANCOS DE DADOS
+      source ORGANIZACAO DE ARQUIVOS
+  ]
+  edge
+  [
+      target INTRODUCAO A INTELIGENCIA ARTIFICIAL
+      source ESTRUTURAS DE DADOS
+  ]
+  edge
+  [
+      target SOFTWARE BASICO
+      source ESTRUTURAS DE DADOS
+  ]
+  edge
+  [
+      target SOFTWARE BASICO
+      source ORGANIZACAO E ARQUITETURA DE COMPUTADORES
+  ]
+  edge
+  [
+      target FUNDAMENTOS DE SISTEMAS OPERACIONAIS
+      source PROGRAMACAO CONCORRENTE
+  ]
+  edge
+  [
+      target AUTOMATOS E COMPUTABILIDADE
+      source ALGEBRA 1
+  ]
+  edge
+  [
+      target SISTEMAS DE INFORMACAO
+      source BANCOS DE DADOS
+  ]
+  edge
+  [
+      target COMPUTACAO EXPERIMENTAL
+      source ESTRUTURAS DE DADOS
+  ]
+  edge
+  [
+      target COMPUTACAO EXPERIMENTAL
+      source PROBABILIDADE E ESTATISTICA
+  ]
+  edge
+  [
+      target PROJETO E ANALISE DE ALGORITMOS
+      source CALCULO 1
+  ]
+  edge
+  [
+      target PROJETO E ANALISE DE ALGORITMOS
+      source TECNICAS DE PROGRAMACAO 1
+  ]
+  edge
+  [
+      target COMPILADORES
+      source LINGUAGENS DE PROGRAMACAO
+  ]
+  edge
+  [
+      target COMPILADORES
+      source SOFTWARE BASICO
+  ]
+  edge
+  [
+      target COMPILADORES
+      source AUTOMATOS E COMPUTABILIDADE
+  ]
+  edge
+  [
+      target SEGURANCA COMPUTACIONAL
+      source REDES DE COMPUTADORES
+  ]
+]

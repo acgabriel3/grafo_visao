@@ -151,6 +151,8 @@ vector<Vertice> Grafo::intersecao(vector<Vertice> candidatos, vector<Vertice> ad
 
     vector<Vertice> intersecao;
 
+    cout << "X" << endl;
+
     for(auto verticeCan : candidatos) {
         for(auto verticeAdj : adjascentes) {
             if(verticeCan.get_id() == verticeAdj.get_id()) {
@@ -159,8 +161,10 @@ vector<Vertice> Grafo::intersecao(vector<Vertice> candidatos, vector<Vertice> ad
         }
     }
 
-    return intersecao;
 
+    cout << "Y" << endl;
+
+    return intersecao;
 }
 
 vector<Vertice> Grafo::retiraVertice(vector<Vertice> vertices, Vertice vertice) {
@@ -193,18 +197,18 @@ void Grafo::bron_kerbosh(vector<Vertice> pertencentes,
     vector<Vertice> pertencentesRecur;
     vector<Vertice> candidatosRecur;
     vector<Vertice> analisadosRecur;
-    vector<Vertice> aux;
 
 
     if(candidatos.empty() && analisados.empty()) {
         //Temos um clique, que seria o pertencentes
         cliquesMaximais.push_back(pertencentes);
-        /*cout << "Estive Aqui";
+        return;
+        cout << "Estive Aqui";
         cout << "clique: " << endl;
         for(auto vertice : pertencentes) {
             cout << vertice.get_id() << " ";
         }
-        cout << "aaaaaaaaaaa" << endl; */
+        cout << "aaaaaaaaaaa" << endl;
     }
 
     for(auto vertice : candidatos) {
@@ -215,23 +219,15 @@ void Grafo::bron_kerbosh(vector<Vertice> pertencentes,
         candidatosRecur = this->intersecao(candidatos, vertice.get_adjascentes());
         analisadosRecur = this->intersecao(analisados, vertice.get_adjascentes());
         this->bron_kerbosh(pertencentesRecur, candidatosRecur, analisadosRecur);
-        /*for(auto vertice : pertencentes) {
+        for(auto vertice : pertencentes) {
             cout << vertice.get_id() << " ";
         }
-        cout << "bbbbbbbbbbb" << endl; */
-        for(auto checaVisita : candidatos) {
-            if(checaVisita.get_visitado()) {
-                cout << "iepa lelelele";
-                candidatos = this->retiraVertice(candidatos, checaVisita);
-            }
-        }
+        cout << "bbbbbbbbbbb" << endl;
 
         analisados.push_back(vertice);
-
-        if(!candidatos.size()){
+        //if(!candidatosRecur.empty()){
             candidatos = this->retiraVertice(candidatos, vertice);
-        }
-
+        //}
 
     }
 
