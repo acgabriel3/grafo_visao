@@ -193,6 +193,7 @@ void Grafo::bron_kerbosh(vector<Vertice> pertencentes,
     vector<Vertice> pertencentesRecur;
     vector<Vertice> candidatosRecur;
     vector<Vertice> analisadosRecur;
+    vector<Vertice> aux;
 
 
     if(candidatos.empty() && analisados.empty()) {
@@ -208,6 +209,7 @@ void Grafo::bron_kerbosh(vector<Vertice> pertencentes,
 
     for(auto vertice : candidatos) {
 
+        vertice.set_visitado(true);
         pertencentesRecur = pertencentes;
         pertencentesRecur.push_back(vertice); //Adicionado toda vez que bron eh chamada
         candidatosRecur = this->intersecao(candidatos, vertice.get_adjascentes());
@@ -217,9 +219,20 @@ void Grafo::bron_kerbosh(vector<Vertice> pertencentes,
             cout << vertice.get_id() << " ";
         }
         cout << "bbbbbbbbbbb" << endl; */
-        analisados.push_back(vertice);
-        //candidatos = this->retiraVertice(candidatos, vertice);
-
+        for(auto checaVisita : candidatos) {
+            if(checaVisita.get_visitado()) {
+                cout << "iepa lelelele";
+                candidatos = this->retiraVertice(candidatos, checaVisita);
+            }
         }
+
+        analisados.push_back(vertice);
+
+        if(!candidatos.size()){
+            candidatos = this->retiraVertice(candidatos, vertice);
+        }
+
+
+    }
 
 }

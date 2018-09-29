@@ -33,13 +33,15 @@ int main(int argc, char* argv[]) {
 
     cout << "quantidade cliques: " << grafoTeste.get_cliques().size() << "------";
 
-
+    /*
     for(auto clique : grafoTeste.get_cliques()) {
         for(auto vertice : clique) {
             cout << vertice.get_id() << " ";
         }
         cout << "---------" << endl;
     }
+    */
+
 
     cout << "eh nois manolo" << endl;
 
