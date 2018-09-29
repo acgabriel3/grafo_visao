@@ -89,6 +89,8 @@ class Grafo {
                           vector<Vertice> candidatos,
                           vector<Vertice> naoPertencentes);
         vector<Vertice> intersecao(vector<Vertice> candidatos, vector<Vertice> adjascentes);
+        vector<Vertice> retiraVertice(vector<Vertice> vertices, Vertice vertice);
+
 };
 
 #endif // ESTRUTURA_HPP

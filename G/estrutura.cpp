@@ -52,6 +52,18 @@ void Vertice::AdicionaAdj(Vertice &vertice) {
 
 }
 
+void Vertice::set_visitado(bool visitado) {
+
+    this->visitado = visitado;
+
+}
+
+bool Vertice::get_visitado() {
+
+    return this->visitado;
+
+}
+
 //*******************************************************Metodos da classe Grafo***************************************************
 
 vector<Vertice> Grafo::get_vertices() {
@@ -151,24 +163,62 @@ vector<Vertice> Grafo::intersecao(vector<Vertice> candidatos, vector<Vertice> ad
 
 }
 
+vector<Vertice> Grafo::retiraVertice(vector<Vertice> vertices, Vertice vertice) {
+
+    int pos = -1;
+
+    for(int i = 0; i < vertices.size(); i++) {
+        if(vertices[i].get_id() == vertice.get_id()) {
+            pos = i;
+        }
+    }
+
+    if(pos > -1) {
+
+        vertices.erase(vertices.begin() + pos);
+        return vertices;
+
+    }
+
+    cout << "Vertice nao encontrado" << endl;
+    return vertices;
+
+}
+
 
 void Grafo::bron_kerbosh(vector<Vertice> pertencentes,
                          vector<Vertice> candidatos,
                          vector<Vertice> analisados) {
 
+    vector<Vertice> pertencentesRecur;
+    vector<Vertice> candidatosRecur;
+    vector<Vertice> analisadosRecur;
+
 
     if(candidatos.empty() && analisados.empty()) {
         //Temos um clique, que seria o pertencentes
         cliquesMaximais.push_back(pertencentes);
+        /*cout << "Estive Aqui";
+        cout << "clique: " << endl;
+        for(auto vertice : pertencentes) {
+            cout << vertice.get_id() << " ";
+        }
+        cout << "aaaaaaaaaaa" << endl; */
     }
 
     for(auto vertice : candidatos) {
 
-        pertencentes.push_back(vertice); //Adicionado toda vez que bron eh chamada
-        candidatos = Grafo.intersecao(candidatos, vertice.get_adjascentes());
-        analisados = Grafo.intersecao(analisados, Vertice.get_adjascentes());
-        Grafo.bron_kerbosh(pertencentes, candidatos, analisados);
+        pertencentesRecur = pertencentes;
+        pertencentesRecur.push_back(vertice); //Adicionado toda vez que bron eh chamada
+        candidatosRecur = this->intersecao(candidatos, vertice.get_adjascentes());
+        analisadosRecur = this->intersecao(analisados, vertice.get_adjascentes());
+        this->bron_kerbosh(pertencentesRecur, candidatosRecur, analisadosRecur);
+        /*for(auto vertice : pertencentes) {
+            cout << vertice.get_id() << " ";
+        }
+        cout << "bbbbbbbbbbb" << endl; */
         analisados.push_back(vertice);
+        //candidatos = this->retiraVertice(candidatos, vertice);
 
         }
 
