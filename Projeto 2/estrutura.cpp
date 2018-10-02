@@ -97,7 +97,7 @@ void Grafo::adiciona_vertice(Vertice& vertice){
 }
 
 vector<Vertice> Grafo::retira_vertice(Vertice& vertice) {
-    
+
 }
 
 void Grafo::set_arestas(string arquivo) {
@@ -142,6 +142,56 @@ void Grafo::cria_aresta(string source, string target) {
             break;
         }
     }
-    
+
     vertices[i].set_adjascente(vertices[j]);
+}
+
+void Grafo::kahns() {
+
+    int grau;
+    vector<int> grauVertice; //devera estar pareado com os vertices do grafo, portanto a ordem dos vertices no grafo nao deve ser mudada
+    vector<Vertice> filaVertices; //devera funcionar como uma fila
+    vector<Vertice> adjascentes;
+    int qtdVisitados = 0;
+    Vertice aux;
+
+    for(int i = 0; i < this->vertices.size(); i++) {
+        grau = this->vertices[i].calculaGrau();
+        grauVertice.push_back(grau);
+    }
+
+    for(int i = 0; i < this->vertices.size(); i++) {
+        if(grauVertice[i] == 0) {
+            filaVertices.push_back(this->vertices[i]);
+        }
+    }
+
+    while(!filaVertices.empty()) {
+
+        aux = this->retiraInicio(filaVertices);
+        this->ordemTopologica.push_back(this->retiraInicio(filaVertices));
+
+        qtdVisitados++;
+        adjascentes = aux.get_adjascentes();
+
+        for(int i = 0; i < this->vertices.size(); i++) {
+            for(int j = 0; j < adjascentes.size(); j++) {
+
+                if(this->vertices[i].get_nome() == adjascentes[j].get_nome()) {
+
+                    grauVertice[i]--;
+
+                    if(grauVertice[i] == 0) {
+                        filaVertices.push_back(this->vertices[i]);
+                    }
+
+                }
+            }
+        }
+    }
+
+    if(qtdVisitados != this->vertices.size()) {
+        cout << "nao eh possivel fazer uma ordenacao topologica com esse grafo" << endl;
+    }
+
 }

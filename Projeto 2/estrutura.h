@@ -38,6 +38,8 @@ class Vertice {
 
         void set_adjascente(Vertice&);
         vector<Vertice> get_adjascentes();
+
+        int calculaGrau();
 };
 
 /**
@@ -48,8 +50,9 @@ class Vertice {
 class Grafo {
 
     private:
-    
+
         vector<Vertice> vertices;
+        vector<Vertice> ordemTopologica;
 
     public:
 
@@ -58,9 +61,12 @@ class Grafo {
 
         void adiciona_vertice(Vertice&);
         vector<Vertice> retira_vertice(Vertice&);
-        
+
         void set_arestas(string);
         void cria_aresta(string, string);
+
+        void kahns();
+
 };
 
 #endif

@@ -202,13 +202,17 @@ void Grafo::bron_kerbosh(vector<Vertice> pertencentes,
     if(candidatos.empty() && analisados.empty()) {
         //Temos um clique, que seria o pertencentes
         cliquesMaximais.push_back(pertencentes);
-        return;
+        //return;
         cout << "Estive Aqui";
         cout << "clique: " << endl;
         for(auto vertice : pertencentes) {
             cout << vertice.get_id() << " ";
         }
         cout << "aaaaaaaaaaa" << endl;
+    } else if(candidatos.empty() && !analisados.empty()) {
+
+        return;
+
     }
 
     for(auto vertice : candidatos) {
@@ -224,10 +228,11 @@ void Grafo::bron_kerbosh(vector<Vertice> pertencentes,
         }
         cout << "bbbbbbbbbbb" << endl;
 
+        if(candidatos.empty()){
+           return;
+        }
+        candidatos = this->retiraVertice(candidatos, vertice);
         analisados.push_back(vertice);
-        //if(!candidatosRecur.empty()){
-            candidatos = this->retiraVertice(candidatos, vertice);
-        //}
 
     }
 
