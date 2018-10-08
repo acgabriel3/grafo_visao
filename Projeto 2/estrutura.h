@@ -7,7 +7,7 @@ using namespace std;
 
 /**
  * @file estrutura.h
- * @author Thiago Santos Matos -
+ * @author Thiago Santos Matos - 170063666
  * @author Gabriel Alves Castro - 170033813
  * @date 07 de outubro de 2018
  *
