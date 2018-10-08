@@ -291,33 +291,88 @@ void Grafo::ordenacao_topologica_aux(Vertice& v, map<string, bool>& visitados, s
     pilha.push(v);
 }
 
-void caminho_critico(int chave, vector<Vertice*> adjascentes) {
+// void caminho_critico(int chave, vector<Vertice*> adjascentes) {
 
-    if(chave == 0) { //A chave serve para identificar no loop a primeira vez que se chamou a funcao, e portanto preencher corretamente os pesos.
+//     if(chave == 0) { //A chave serve para identificar no loop a primeira vez que se chamou a funcao, e portanto preencher corretamente os pesos.
 
-        for(auto verticeDag : adjascentes) {
-            verticeDag->set_pesoCritico(verticeDag->get_peso());
-            //pesos.push_back(verticeDag.get_pesoCritico());
-            verticeDag->set_antecedente(NULL); //errei aqui
+//         for(auto verticeDag : adjascentes) {
+//             verticeDag->set_pesoCritico(verticeDag->get_peso());
+//             //pesos.push_back(verticeDag.get_pesoCritico());
+//             verticeDag->set_antecedente(NULL); //errei aqui
+//         }
+
+//     } else {
+
+//         for(auto verticeDag : adjascentes) {
+
+//             //pesos = NULL;
+//             for(auto verticeAdj : verticeDag->get_adjascentes()) {
+//                 int pesoNovo = verticeDag->get_pesoCritico() + verticeAdj->get_peso();
+//                 if(verticeAdj->get_pesoCritico() < pesoNovo) {
+//                     verticeAdj->set_pesoCritico(pesoNovo);
+//                     verticeAdj->set_antecedente(verticeDag);
+//                 }
+//             }
+
+//             caminho_critico(1, verticeDag->get_adjascentes);
+
+//         }
+
+//     }
+// }
+
+void Grafo::computa_caminhos(Vertice& v, map<string, int>& pesos, map<string, bool>& visitados) {
+    visitados[v.get_nome()] = true;
+    this->caminho.push_back(v);
+
+    int pos;
+    for(pos = 0; pos < vertices.size(); pos++) {
+        if(vertices[pos].get_nome() == v.get_nome()) {
+            break;
         }
-
-    } else {
-
-        for(auto verticeDag : adjascentes) {
-
-            //pesos = NULL;
-            for(auto verticeAdj : verticeDag->get_adjascentes()) {
-                int pesoNovo = verticeDag->get_pesoCritico() + verticeAdj->get_peso();
-                if(verticeAdj->get_pesoCritico() < pesoNovo) {
-                    verticeAdj->set_pesoCritico(pesoNovo);
-                    verticeAdj->set_antecedente(verticeDag);
-                }
-            }
-
-            caminho_critico(1, verticeDag->get_adjascentes);
-
-        }
-
     }
+
+    for(auto i : vertices[pos].get_adjascentes()) {
+        pesos[i->get_nome()] = max(pesos[v.get_nome()], pesos[v.get_nome()] + i->get_peso());
+        if(!visitados[i->get_nome()]) {
+            this->computa_caminhos(*i, pesos, visitados);
+        }
+    }
+
+    if(!v.grau_saida()) {
+        caminhos.emplace_back(caminho, pesos[v.get_nome()]);
+    }
+
+    visitados.clear();
+    caminho.pop_back();
 }
 
+pair<vector<Vertice>, int> Grafo::caminho_critico() {
+    map<string, int> pesos;
+
+    for(auto i : this->vertices) {
+        pesos[i.get_nome()] = i.get_peso();
+    }
+
+    map<string, bool> visitados;
+
+    if(ordem_topologica.empty()) {
+        this->ordenacao_topologica();
+    }
+
+    for(auto i : this->ordem_topologica) {
+        if(!i.grau_entrada()) {
+            computa_caminhos(i, pesos, visitados);
+        }
+    }
+
+    int pos = 0, critico = 0;
+    for(int i = 0; i < caminhos.size(); i++) {
+        if(caminhos[i].second > critico) {
+            pos = i;
+            critico = caminhos[i].second;
+        }
+    }
+
+    return caminhos[pos];
+}

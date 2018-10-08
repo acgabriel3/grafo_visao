@@ -71,6 +71,8 @@ class Grafo {
 
         vector<Vertice> vertices;
         vector<Vertice> ordem_topologica;
+        vector<Vertice> caminho;
+        vector<pair<vector<Vertice>, int>> caminhos;
 
     public:
 
@@ -87,10 +89,8 @@ class Grafo {
         vector<Vertice> ordenacao_topologica();
         void ordenacao_topologica_aux(Vertice&, map<string, bool>&, stack<Vertice>&);
 
-        //adjascentes deve comecar recebendo a ordem topologica
-        void caminho_critico(int chave, vector<Vertice> adjascentes); //Depois percorrer a DAG de tras pra frente e procurar o maior pesoCritico
-                                                            //Entao montar o caminho por meio dos antecedentes a este vertice.
-
+        void computa_caminhos(Vertice&, map<string, int>&, map<string, bool>&);
+        pair<vector<Vertice>, int> caminho_critico();
 };
 
 #endif
