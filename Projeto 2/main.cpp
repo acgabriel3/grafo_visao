@@ -1,4 +1,4 @@
-#include "estrutura.h"
+#include "estrutura.cpp"
 
 using namespace std;
 
@@ -33,6 +33,8 @@ int main() {
     for(auto i : ordem_topologica) {
         cout << i.get_nome() << endl;
     }
+
+    grafo.caminho_critico(0, ordem_topologica);
 
     return 0;
 }

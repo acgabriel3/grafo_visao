@@ -90,6 +90,24 @@ int Vertice::grau_saida() {
 
 }
 
+void Vertice::set_pesoCritico(int pesoCritico) {
+
+    this->pesoCritico = pesoCritico;
+
+}
+
+int Vertice::get_pesoCritico() {
+
+    return this->pesoCritico;
+
+}
+
+void Vertice::set_antecedente(Vertice &antecedente) {
+
+    this->antecedente = &antecedente;
+
+}
+
 //*******************************************************Metodos da classe Grafo***************************************************
 
 void Grafo::set_vertices(string arquivo) {
@@ -272,3 +290,34 @@ void Grafo::ordenacao_topologica_aux(Vertice& v, map<string, bool>& visitados, s
 
     pilha.push(v);
 }
+
+void caminho_critico(int chave, vector<Vertice*> adjascentes) {
+
+    if(chave == 0) { //A chave serve para identificar no loop a primeira vez que se chamou a funcao, e portanto preencher corretamente os pesos.
+
+        for(auto verticeDag : adjascentes) {
+            verticeDag->set_pesoCritico(verticeDag->get_peso());
+            //pesos.push_back(verticeDag.get_pesoCritico());
+            verticeDag->set_antecedente(NULL); //errei aqui
+        }
+
+    } else {
+
+        for(auto verticeDag : adjascentes) {
+
+            //pesos = NULL;
+            for(auto verticeAdj : verticeDag->get_adjascentes()) {
+                int pesoNovo = verticeDag->get_pesoCritico() + verticeAdj->get_peso();
+                if(verticeAdj->get_pesoCritico() < pesoNovo) {
+                    verticeAdj->set_pesoCritico(pesoNovo);
+                    verticeAdj->set_antecedente(verticeDag);
+                }
+            }
+
+            caminho_critico(1, verticeDag->get_adjascentes);
+
+        }
+
+    }
+}
+

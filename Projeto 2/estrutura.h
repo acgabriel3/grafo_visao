@@ -21,6 +21,8 @@ class Vertice {
 
         vector<Vertice*> adjascentes;
         vector<Vertice*> requisitos;
+        Vertice* antecedente;
+        int pesoCritico;
 
     public:
 
@@ -38,11 +40,15 @@ class Vertice {
         void set_creditos(int);
         void set_dificuldade(int);
         void set_visitado();
+        void set_pesoCritico(int);
+        void set_antecedente(Vertice&);
+
         string get_nome();
         int get_creditos();
         int get_dificuldade();
         bool get_visitado();
         int get_peso();
+        int get_pesoCritico();
 
         void set_adjascente(Vertice&);
         vector<Vertice*> get_adjascentes();
@@ -80,6 +86,10 @@ class Grafo {
         // void kahns();
         vector<Vertice> ordenacao_topologica();
         void ordenacao_topologica_aux(Vertice&, map<string, bool>&, stack<Vertice>&);
+
+        //adjascentes deve comecar recebendo a ordem topologica
+        void caminho_critico(int chave, vector<Vertice> adjascentes); //Depois percorrer a DAG de tras pra frente e procurar o maior pesoCritico
+                                                            //Entao montar o caminho por meio dos antecedentes a este vertice.
 
 };
 
