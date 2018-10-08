@@ -17,29 +17,41 @@ class Vertice {
         string nome;
         int creditos;
         int dificuldade;
+        bool visitado;
 
-        vector<Vertice> adjascentes;
+        vector<Vertice*> adjascentes;
+        vector<Vertice*> requisitos;
 
     public:
 
-        Vertice() {}
+        Vertice() {
+            this->visitado = false;
+        }
         Vertice(string nome, int creditos, int dificuldade) {
             this->set_nome(nome);
             this->set_creditos(creditos);
             this->set_dificuldade(dificuldade);
+            this->visitado = false;
         }
 
         void set_nome(string);
         void set_creditos(int);
         void set_dificuldade(int);
+        void set_visitado();
         string get_nome();
         int get_creditos();
         int get_dificuldade();
+        bool get_visitado();
+        int get_peso();
 
         void set_adjascente(Vertice&);
-        vector<Vertice> get_adjascentes();
+        vector<Vertice*> get_adjascentes();
 
-        int calculaGrau();
+        void set_requisito(Vertice&);
+        vector<Vertice*> get_requisitos();
+
+        int grau_entrada();
+        int grau_saida();
 };
 
 /**
@@ -52,7 +64,7 @@ class Grafo {
     private:
 
         vector<Vertice> vertices;
-        vector<Vertice> ordemTopologica;
+        vector<Vertice> ordem_topologica;
 
     public:
 
@@ -65,7 +77,9 @@ class Grafo {
         void set_arestas(string);
         void cria_aresta(string, string);
 
-        void kahns();
+        // void kahns();
+        vector<Vertice> ordenacao_topologica();
+        void ordenacao_topologica_aux(Vertice&, map<string, bool>&, stack<Vertice>&);
 
 };
 
