@@ -1,0 +1,603 @@
+professores
+[
+    node
+    [
+        id P1
+        habilitacoes 3
+        interesses E10, E20, E1, E27, E3
+    ]
+    node
+    [
+        id P2
+        habilitacoes 2
+        interesses E10, E20, E2, E27, E5
+    ]
+    node
+    [
+        id P3
+        habilitacoes 2
+        interesses E10, E20, E3, E27, E7
+    ]
+    node
+    [
+        id P4
+        habilitacoes 2
+        interesses E10, E20, E4, E27, E9
+    ]
+    node
+    [
+        id P5
+        habilitacoes 3
+        interesses E10, E20, E5, E27, E11
+    ]
+    node
+    [
+        id P6
+        habilitacoes 2
+        interesses E10, E5, E6, E27, E13
+    ]
+    node
+    [
+        id P7
+        habilitacoes 2
+        interesses E10, E5, E7, E37, E15
+    ]
+    node
+    [
+        id P8
+        habilitacoes 2
+        interesses E10, E5, E8, E35, E17
+    ]
+    node
+    [
+        id P9
+        habilitacoes 2
+        interesses E10, E5, E9, E35, E21
+    ]
+    node
+    [
+        id P10
+        habilitacoes 3
+        interesses E10, E5, E7, E35, E23
+    ]
+    node
+    [
+        id P11
+        habilitacoes 2
+        interesses E20, E30, E11, E35, E25
+    ]
+    node
+    [
+        id P12
+        habilitacoes 2
+        interesses E20, E30, E12, E35, E27
+    ]
+    node
+    [
+        id P13
+        habilitacoes 2
+        interesses E20, E30, E13, E35, E29
+    ]
+    node
+    [
+        id P14
+        habilitacoes 2
+        interesses E20, E30, E14, E48, E31
+    ]
+    node
+    [
+        id P15
+        habilitacoes 3
+        interesses E20, E30, E15, E48, E33
+    ]
+    node
+    [
+        id P16
+        habilitacoes 2
+        interesses E20, E35, E16, E48, E35
+    ]
+    node
+    [
+        id P17
+        habilitacoes 2
+        interesses E20, E35, E17, E48, E37
+    ]
+    node
+    [
+        id P18
+        habilitacoes 2
+        interesses E20, E35, E18, E48, E39
+    ]
+    node
+    [
+        id P19
+        habilitacoes 2
+        interesses E20, E35, E19, E10, E41
+    ]
+    node
+    [
+        id P20
+        habilitacoes 3
+        interesses E20, E35, E30, E10, E43
+    ]
+    node
+    [
+        id P21
+        habilitacoes 1
+        interesses E30, E40, E21, E10, E45
+    ]
+    node
+    [
+        id P22
+        habilitacoes 2
+        interesses E30, E40, E22, E10, E47
+    ]
+    node
+    [
+        id P23
+        habilitacoes 2
+        interesses E30, E40, E23, E10, E49
+    ]
+    node
+    [
+        id P24
+        habilitacoes 2
+        interesses E30, E40, E24, E10, E2
+    ]
+    node
+    [
+        id P25
+        habilitacoes 3
+        interesses E30, E40, E25, E10, E4
+    ]
+    node
+    [
+        id P26
+        habilitacoes 2
+        interesses E30, E45, E26, E23, E6
+    ]
+    node
+    [
+        id P27
+        habilitacoes 2
+        interesses E30, E45, E27, E23, E8
+    ]
+    node
+    [
+        id P28
+        habilitacoes 2
+        interesses E30, E45, E28, E23, E12
+    ]
+    node
+    [
+        id P29
+        habilitacoes 2
+        interesses E30, E45, E29, E23, E14
+    ]
+    node
+    [
+        id P30
+        habilitacoes 3
+        interesses E30, E45, E3, E31, E16
+    ]
+    node
+    [
+        id P31
+        habilitacoes 1
+        interesses E40, E50, E31, E41, E18
+    ]
+    node
+    [
+        id P32
+        habilitacoes 2
+        interesses E40, E50, E32, E31, E19
+    ]
+    node
+    [
+        id P33
+        habilitacoes 2
+        interesses E40, E50, E33, E31, E22
+    ]
+    node
+    [
+        id P34
+        habilitacoes 2
+        interesses E40, E50, E34, E31, E24
+    ]
+    node
+    [
+        id P35
+        habilitacoes 3
+        interesses E40, E50, E35, E31, E26
+    ]
+    node
+    [
+        id P36
+        habilitacoes 2
+        interesses E40, E50, E36, E21, E28
+    ]
+    node
+    [
+        id P37
+        habilitacoes 2
+        interesses E40, E2, E37, E21, E32
+    ]
+    node
+    [
+        id P38
+        habilitacoes 2
+        interesses E40, E2, E38, E21, E34
+    ]
+    node
+    [
+        id P39
+        habilitacoes 2
+        interesses E40, E2, E39, E21, E36
+    ]
+    node
+    [
+        id P40
+        habilitacoes 3
+        interesses E40, E2, E4, E11, E38
+    ]
+    node
+    [
+        id P41
+        habilitacoes 1
+        interesses E40, E2, E41, E11, E42
+    ]
+    node
+    [
+        id P42
+        habilitacoes 2
+        interesses E40, E4, E42, E11, E44
+    ]
+    node
+    [
+        id P43
+        habilitacoes 2
+        interesses E40, E4, E43, E11, E46
+    ]
+    node
+    [
+        id P44
+        habilitacoes 2
+        interesses E40, E4, E44, E11, E48
+    ]
+    node
+    [
+        id P45
+        habilitacoes 3
+        interesses E40, E4, E45, E11, E5
+    ]
+    node
+    [
+        id P46
+        habilitacoes 2
+        interesses E40, E4, E46, E11, E45
+    ]
+    node
+    [
+        id P47
+        habilitacoes 2
+        interesses E40, E6, E47, E1, E45
+    ]
+    node
+    [
+        id P48
+        habilitacoes 2
+        interesses E40, E6, E48, E1, E45
+    ]
+    node
+    [
+        id P49
+        habilitacoes 2
+        interesses E40, E6, E49, E1, E45
+    ]
+    node
+    [
+        id P50
+        habilitacoes 3
+        interesses E40, E6, E50, E1, E45
+    ]
+    node
+    [
+        id P51
+        habilitacoes 1
+        interesses E50, E6, E49, E1, E45
+    ]
+    node
+    [
+        id P52
+        habilitacoes 2
+        interesses E49, E8, E48, E1, E45
+    ]
+    node
+    [
+        id P53
+        habilitacoes 2
+        interesses E48, E8, E47, E1, E45
+    ]
+    node
+    [
+        id P54
+        habilitacoes 2
+        interesses E47, E8, E46, E1, E45
+    ]
+    node
+    [
+        id P55
+        habilitacoes 3
+        interesses E46, E8, E45, E1, E45
+    ]
+    node
+    [
+        id P56
+        habilitacoes 2
+        interesses E45, E8, E44, E2, E25
+    ]
+    node
+    [
+        id P57
+        habilitacoes 2
+        interesses E44, E8, E43, E3, E25
+    ]
+    node
+    [
+        id P58
+        habilitacoes 2
+        interesses E43, E8, E42, E4, E25
+    ]
+    node
+    [
+        id P59
+        habilitacoes 2
+        interesses E42, E8, E41, E5, E25
+    ]
+    node
+    [
+        id P60
+        habilitacoes 3
+        interesses E41, E8, E40, E6, E25
+    ]
+    node
+    [
+        id P61
+        habilitacoes 1
+        interesses E40, E8, E4, E7, E15
+    ]
+    node
+    [
+        id P62
+        habilitacoes 2
+        interesses E39, E12, E14, E9, E15
+    ]
+    node
+    [
+        id P63
+        habilitacoes 2
+        interesses E38, E12, E24, E10, E15
+    ]
+    node
+    [
+        id P64
+        habilitacoes 2
+        interesses E37, E12, E34, E11, E15
+    ]
+    node
+    [
+        id P65
+        habilitacoes 3
+        interesses E36, E12, E14, E13, E15
+    ]
+    node
+    [
+        id P66
+        habilitacoes 2
+        interesses E35, E12, E4, E14, E15
+    ]
+    node
+    [
+        id P67
+        habilitacoes 2
+        interesses E34, E12, E24, E16, E15
+    ]
+    node
+    [
+        id P68
+        habilitacoes 2
+        interesses E33, E12, E34, E17, E15
+    ]
+    node
+    [
+        id P69
+        habilitacoes 2
+        interesses E32, E12, E44, E18, E15
+    ]
+    node
+    [
+        id P70
+        habilitacoes 3
+        interesses E31, E12, E1, E19, E15
+    ]
+    node
+    [
+        id P71
+        habilitacoes 1
+        interesses E30, E12, E1, E20, E35
+    ]
+    node
+    [
+        id P72
+        habilitacoes 2
+        interesses E29, E12, E1, E21, E35
+    ]
+    node
+    [
+        id P73
+        habilitacoes 2
+        interesses E28, E13, E7, E22, E35
+    ]
+    node
+    [
+        id P74
+        habilitacoes 2
+        interesses E27, E13, E7, E23, E35
+    ]
+    node
+    [
+        id P75
+        habilitacoes 3
+        interesses E26, E13, E7, E24, E35
+    ]
+    node
+    [
+        id P76
+        habilitacoes 2
+        interesses E25, E13, E7, E2, E35
+    ]
+    node
+    [
+        id P77
+        habilitacoes 2
+        interesses E24, E13, E7, E26, E35
+    ]
+    node
+    [
+        id P78
+        habilitacoes 2
+        interesses E23, E13, E47, E27, E35
+    ]
+    node
+    [
+        id P79
+        habilitacoes 2
+        interesses E22, E27, E47, E28, E35
+    ]
+    node
+    [
+        id P80
+        habilitacoes 3
+        interesses E21, E27, E47, E29, E35
+    ]
+    node
+    [
+        id P81
+        habilitacoes 1
+        interesses E20, E27, E34, E30, E11
+    ]
+    node
+    [
+        id P82
+        habilitacoes 2
+        interesses E19, E27, E34, E31, E20
+    ]
+    node
+    [
+        id P83
+        habilitacoes 2
+        interesses E18, E27, E3, E32, E20
+    ]
+    node
+    [
+        id P84
+        habilitacoes 2
+        interesses E17, E44, E3, E33, E20
+    ]
+    node
+    [
+        id P85
+        habilitacoes 3
+        interesses E16, E44, E3, E34, E20
+    ]
+    node
+    [
+        id P86
+        habilitacoes 2
+        interesses E15, E44, E3, E35, E20
+    ]
+    node
+    [
+        id P87
+        habilitacoes 2
+        interesses E14, E44, E4, E36, E20
+    ]
+    node
+    [
+        id P88
+        habilitacoes 2
+        interesses E13, E44, E4, E37, E20
+    ]
+    node
+    [
+        id P89
+        habilitacoes 2
+        interesses E12, E44, E4, E38, E20
+    ]
+    node
+    [
+        id P90
+        habilitacoes 3
+        interesses E11, E44, E4, E39, E20
+    ]
+    node
+    [
+        id P91
+        habilitacoes 1
+        interesses E10, E47, E4, E40, E1
+    ]
+    node
+    [
+        id P92
+        habilitacoes 2
+        interesses E9, E47, E4, E41, E1
+    ]
+    node
+    [
+        id P93
+        habilitacoes 2
+        interesses E8, E47, E4, E42, E1
+    ]
+    node
+    [
+        id P94
+        habilitacoes 2
+        interesses E7, E47, E4, E43, E1
+    ]
+    node
+    [
+        id P95
+        habilitacoes 3
+        interesses E6, E47, E4, E44, E1
+    ]
+    node
+    [
+        id P96
+        habilitacoes 2
+        interesses E5, E47, E4, E45, E1
+    ]
+    node
+    [
+        id P97
+        habilitacoes 2
+        interesses E4, E47, E14, E46, E1
+    ]
+    node
+    [
+        id P98
+        habilitacoes 2
+        interesses E3, E47, E4, E48, E1
+    ]
+    node
+    [
+        id P99
+        habilitacoes 2
+        interesses E2, E47, E4, E49, E1
+    ]
+    node
+    [
+        id P100
+        habilitacoes 3
+        interesses E1, E47, E4, E50, E10
+    ]
+]

@@ -1,0 +1,303 @@
+escolas
+[
+    node
+    [
+        id E1
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E2
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E3
+        habilitacoes 3
+        vagas 1
+    ]
+    node
+    [
+        id E4
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E5
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E6
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E7
+        habilitacoes 3
+        vagas 1
+    ]
+    node
+    [
+        id E8
+        habilitacoes 3
+        vagas 1
+    ]
+    node
+    [
+        id E9
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E10
+        habilitacoes 1
+        vagas 2
+    ]
+    node
+    [
+        id E11
+        habilitacoes 3
+        vagas 3
+    ]
+    node
+    [
+        id E12
+        habilitacoes 3
+        vagas 3
+    ]
+    node
+    [
+        id E13
+        habilitacoes 3
+        vagas 3
+    ]
+    node
+    [
+        id E14
+        habilitacoes 3
+        vagas 2
+    ]
+    node
+    [
+        id E15
+        habilitacoes 3
+        vagas 1
+    ]
+    node
+    [
+        id E16
+        habilitacoes 3
+        vagas 1
+    ]
+    node
+    [
+        id E17
+        habilitacoes 3
+        vagas 1
+    ]
+    node
+    [
+        id E18
+        habilitacoes 3
+        vagas 1
+    ]
+    node
+    [
+        id E19
+        habilitacoes 3
+        vagas 2
+    ]
+    node
+    [
+        id E20
+        habilitacoes 3
+        vagas 2
+    ]
+    node
+    [
+        id E21
+        habilitacoes 3
+        vagas 2
+    ]
+    node
+    [
+        id E22
+        habilitacoes 3
+        vagas 1
+    ]
+    node
+    [
+        id E23
+        habilitacoes 3
+        vagas 2
+    ]
+    node
+    [
+        id E24
+        habilitacoes 3
+        vagas 1
+    ]
+    node
+    [
+        id E25
+        habilitacoes 3
+        vagas 2
+    ]
+    node
+    [
+        id E26
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E27
+        habilitacoes 2
+        vagas 2
+    ]
+    node
+    [
+        id E28
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E29
+        habilitacoes 2
+        vagas 2
+    ]
+    node
+    [
+        id E30
+        habilitacoes 2
+        vagas 2
+    ]
+    node
+    [
+        id E31
+        habilitacoes 2
+        vagas 2
+    ]
+    node
+    [
+        id E32
+        habilitacoes 2
+        vagas 2
+    ]
+    node
+    [
+        id E33
+        habilitacoes 2
+        vagas 2
+    ]
+    node
+    [
+        id E34
+        habilitacoes 2
+        vagas 2
+    ]
+    node
+    [
+        id E35
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E36
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E37
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E38
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E39
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E40
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E41
+        habilitacoes 2
+        vagas 2
+    ]
+    node
+    [
+        id E42
+        habilitacoes 2
+        vagas 3
+    ]
+    node
+    [
+        id E43
+        habilitacoes 3
+        vagas 2
+    ]
+    node
+    [
+        id E44
+        habilitacoes 2
+        vagas 3
+    ]
+    node
+    [
+        id E45
+        habilitacoes 2
+        vagas 3
+    ]
+    node
+    [
+        id E46
+        habilitacoes 2
+        vagas 3
+    ]
+    node
+    [
+        id E47
+        habilitacoes 2
+        vagas 3
+    ]
+    node
+    [
+        id E48
+        habilitacoes 2
+        vagas 3
+    ]
+    node
+    [
+        id E49
+        habilitacoes 2
+        vagas 1
+    ]
+    node
+    [
+        id E50
+        habilitacoes 2
+        vagas 1
+    ]
+]
