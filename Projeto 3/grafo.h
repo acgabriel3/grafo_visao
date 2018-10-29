@@ -12,6 +12,7 @@ class Professor {
         string id;
         int habilitacoes;
         vector<string> interesses;
+        Escola escolaEmparelhada;
 
     public:
 
@@ -41,6 +42,16 @@ class Professor {
         vector<string> getInteresses() {
             return this->interesses;
         }
+
+        void set_emparelhamento(Escola escola) {
+            this->escolaEmparelhada = escola;
+        }
+
+        Escola get_emparelhamento() {
+            return this->escolaEmparelhada;$
+        }
+
+        bool get_emparelhado();
 };
 
 class Escola {
@@ -81,7 +92,7 @@ class Escola {
         }
 };
 
-class Grafo {
+class Grafo { //Pensar em comos sera formado um emparelhamento
 
     private:
 
@@ -89,7 +100,7 @@ class Grafo {
         vector<Escola> escolas;
 
     public:
-    
+
         void setProfessores();
         void setEscolas();
 
@@ -106,6 +117,8 @@ class Grafo {
         void adiciona_escola(Escola& escola) {
             this->escolas.push_back(escola);
         }
+
+        void calculaEmparelhamentoEstavel();
 };
 
 #endif
