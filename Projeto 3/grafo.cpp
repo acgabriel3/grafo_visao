@@ -57,19 +57,27 @@ void Grafo::setEscolas() {
     }
 
     string line, id, shabilitacoes, svagas;
+    vector<int> habilitacoes;
+
 
     while(file >> line) {
-        if(line == "node") {
-            while(file >> line && line != "id");
+        if(line == "vertice") {
+            while(file >> line && line != "nome");
             file >> id;
-
-            while(file >> line && line != "habilitacoes");
-            file >> shabilitacoes;
-            int habilitacoes = stof(shabilitacoes);
 
             while(file >> line && line != "vagas");
             file >> svagas;
             int vagas = stof(svagas);
+
+            vector<int> aux;
+            while(file >> line && line != "habilidades_Requeridas");
+                for(int i = 0; i < vagas; i++) {
+                    file >> shabilitacoes;
+                    if(i < vagas - 1) shabilitacoes.erase(shabilitacoes.size());
+                    aux.push_back(stof(shabilitacoes));
+                }
+
+            habilitacoes = aux;
 
             Escola escola(id, habilitacoes, vagas);
             this->adiciona_escola(escola);
@@ -80,72 +88,95 @@ void Grafo::setEscolas() {
 
 //*************************************************************************************************************************
 bool Professor::get_emparelhado() {
-    
-    if(escolaEmparelhada == NULL) {
+
+    if(escolaEmparelhada.getId().empty()) {
         return false;
     } else {
-        return true; 
+        return true;
     }
 
 }
 
+
 void Grafo::calculaEmparelhamentoEstavel() {
 
-    //Emparelhamento emparelhamento;
-    bool escolasNaoEmparelhadas = true;
+    bool professoresNaoEmparelhados = true;
 
-   // for(auto vertice : this->vertices) {
-//
-   //     vertice.setNaoEmparelhado();
-//
-   // } //Essa parte se torna inutil, pois ao iniciar as variaveis, as mesmas comecam desemparelhadas
+    Professor professorAux;
 
-    Vertice aux;
+    int contador = 0;
+    int pos;
 
-    while(escolasNaoEmparelhadas) {
+    while(professoresNaoEmparelhados) {
 
-        escolasNaoEmparelhadas = false; //Seta para falso, para que se busque em cada iteracao um professor nao emparelhado;
+        contador++;
+        if(contador == 100) {
+            break;
+        }
 
-        for(auto escola : this->escolas) {
-            if(escola.get_emparelhado()) {
+        professoresNaoEmparelhados = false; //Seta para falso, para que se busque em cada iteracao um professor nao emparelhado;
 
-                    aux = escola;
-                    escolasNaoEmparelhadas == true;
+        //Pode virar um metodo
+        for(int i = 0; i < this->professores.size(); i++) {
+            if(this->professores[i].get_emparelhado()) {
+
+                    professorAux = this->professores[i];
+                    pos = i;
+                    professoresNaoEmparelhados == true;
 
                     break;
             }
-        } //Busca um professor nao emparelhado para continuar o loop (isto devera ser mudado para satisfazer 
+        } //Busca um professor nao emparelhado para continuar o loop (isto devera ser mudado para satisfazer
         //as condicoes das especificacoes)
 
-        for(auto professor : aux.get_preferencias()) { //A escola nao possui preferencias entao este laco deve ser modificado
-            if(!professor.get_emparelhado()) { // se nao estiver emparelhado
+        for(auto escolaID : professorAux.getInteresses()) {
 
-                int valor;
-                for(auto preferencia : professor.get_preferencias()) { //A lista de preferencias deve estar ordenada do melhor para o pior
-                    if(preferencia.get_id() == aux.get_id()) {
-                        valor = preferencia.get_habilitacao(); // checa a quantidade de habilitacoes exigida pela escola
+            // a variavel abaixo e o for podem virar um metodo
+            Escola escolaAtual;
+
+            for(auto escola : this->escolas) {
+                    if(escola.getId() == escolaID) {
+                        escolaAtual = escola;
+                    }
+            }
+
+            if(escolaAtual.getId().empty()) {
+                continue;
+            }
+
+            if(!escolaAtual.get_emparelhado()) { // se nao estiver emparelhado (esta condicao tera de mudar pois a escola pode ter ateh dois professores
+
+                int valor = -1;
+                for(auto preferencia : escolaAtual.getHabilitacoes()) {
+                    if(preferencia <= professorAux.getHabilitacoes()) {
+
+                        valor = preferencia; // checa a quantidade de habilitacoes exigida pela escola
                         break;
+
                     }
                 } // Checar se a escola esta entre as preferencias do professor
 
-                if(professor.get_habilitacao() >= valor) {
-                    professor.set_emparelhamento(aux); //Os emparelhamentos tambem devem ser realizados na escola. Devemos salvar o id do aux para realizar isso de maneira mais eficiente
+                if((valor > 0)) {
+
+                    this->professores[pos].set_emparelhamento(escolaAtual); //Os emparelhamentos tambem devem ser realizados na escola. Devemos salvar o id do aux para realizar isso de maneira mais eficiente
                     break;
+
                 } else {
 
                     continue;
 
                 }
 
-            } else {
-                professor.set_emparelhamento(aux);
-                break;
-            }
+            } /*else {
+
+                //professor.set_emparelhamento(escolaAtual); //Mudar essa funcao tambem
+                //break;
+                continue;
+            } */
         }
 
     }
 
-    //return emparelhamento;
 }
 
 

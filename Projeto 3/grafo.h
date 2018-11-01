@@ -5,6 +5,48 @@
 
 using namespace std;
 
+class Escola {
+
+    private:
+
+        string id;
+        vector<int> habilitacoes;
+        int vagas;
+
+    public:
+
+        Escola() {}
+        Escola(string id, vector<int> habilitacoes, int vagas) {
+            this->setId(id);
+            this->setHabilitacoes(habilitacoes);
+            this->setVagas(vagas);
+        }
+
+        void setId(string id) {
+            this->id = id;
+        }
+        void setHabilitacoes(vector<int> habilitacoes) {
+            this->habilitacoes = habilitacoes;
+        }
+        void setVagas(int vagas) {
+            this->vagas = vagas;
+        }
+
+        string getId() {
+            return this->id;
+        }
+        vector<int> getHabilitacoes() {
+            return this->habilitacoes;
+        }
+        int getVagas() {
+            return this->vagas;
+        }
+
+        bool get_emparelhado() {
+            return false;
+        }; // Estara emparelhado com um professor, ou com dois professores?
+};
+
 class Professor {
 
     private:
@@ -48,48 +90,10 @@ class Professor {
         }
 
         Escola get_emparelhamento() {
-            return this->escolaEmparelhada;$
+            return this->escolaEmparelhada;
         }
 
         bool get_emparelhado();
-};
-
-class Escola {
-
-    private:
-
-        string id;
-        int habilitacoes;
-        int vagas;
-
-    public:
-
-        Escola() {}
-        Escola(string id, int habilitacoes, int vagas) {
-            this->setId(id);
-            this->setHabilitacoes(habilitacoes);
-            this->setVagas(vagas);
-        }
-
-        void setId(string id) {
-            this->id = id;
-        }
-        void setHabilitacoes(int habilitacoes) {
-            this->habilitacoes = habilitacoes;
-        }
-        void setVagas(int vagas) {
-            this->vagas = vagas;
-        }
-
-        string getId() {
-            return this->id;
-        }
-        int getHabilitacoes() {
-            return this->habilitacoes;
-        }
-        int getVagas() {
-            return this->vagas;
-        }
 };
 
 class Grafo { //Pensar em comos sera formado um emparelhamento

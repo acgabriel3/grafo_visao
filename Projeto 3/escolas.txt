@@ -1,303 +1,303 @@
-escolas
+ESCOLAS
 [
-    node
+    vertice
     [
-        id E1
-        habilitacoes 2
+        nome E1
         vagas 1
+        habilidades_Requeridas 2
     ]
-    node
+    vertice
     [
-        id E2
-        habilitacoes 2
+        nome E2
         vagas 1
+        habilidades_Requeridas 2
     ]
-    node
+    vertice
     [
-        id E3
-        habilitacoes 3
+        nome E3
         vagas 1
+        habilidades_Requeridas 3
     ]
-    node
+    vertice
     [
-        id E4
-        habilitacoes 2
+        nome E4
         vagas 1
+        habilidades_Requeridas 2
     ]
-    node
+    vertice
     [
-        id E5
-        habilitacoes 2
+        nome E5
         vagas 1
+        habilidades_Requeridas 2
     ]
-    node
+    vertice
     [
-        id E6
-        habilitacoes 2
+        nome E6
         vagas 1
+        habilidades_Requeridas 2
     ]
-    node
+    vertice
     [
-        id E7
-        habilitacoes 3
+        nome E7
         vagas 1
+        habilidades_Requeridas 3
     ]
-    node
+    vertice
     [
-        id E8
-        habilitacoes 3
+        nome E8
         vagas 1
+        habilidades_Requeridas 3
     ]
-    node
+    vertice
     [
-        id E9
-        habilitacoes 2
+        nome E9
         vagas 1
+        habilidades_Requeridas 2
     ]
-    node
+    vertice
     [
-        id E10
-        habilitacoes 1
+        nome E10
         vagas 2
+        habilidades_Requeridas 1, 2
     ]
-    node
+    vertice
     [
-        id E11
-        habilitacoes 3
-        vagas 3
-    ]
-    node
-    [
-        id E12
-        habilitacoes 3
-        vagas 3
-    ]
-    node
-    [
-        id E13
-        habilitacoes 3
-        vagas 3
-    ]
-    node
-    [
-        id E14
-        habilitacoes 3
+        nome E11
         vagas 2
+        habilidades_Requeridas 3, 3
     ]
-    node
+    vertice
     [
-        id E15
-        habilitacoes 3
-        vagas 1
-    ]
-    node
-    [
-        id E16
-        habilitacoes 3
-        vagas 1
-    ]
-    node
-    [
-        id E17
-        habilitacoes 3
-        vagas 1
-    ]
-    node
-    [
-        id E18
-        habilitacoes 3
-        vagas 1
-    ]
-    node
-    [
-        id E19
-        habilitacoes 3
+        nome E12
         vagas 2
+        habilidades_Requeridas 3, 3
     ]
-    node
+    vertice
     [
-        id E20
-        habilitacoes 3
+        nome E13
         vagas 2
+        habilidades_Requeridas 3, 3
     ]
-    node
+    vertice
     [
-        id E21
-        habilitacoes 3
+        nome E14
         vagas 2
+        habilidades_Requeridas 3, 2
     ]
-    node
+    vertice
     [
-        id E22
-        habilitacoes 3
-        vagas 1
-    ]
-    node
-    [
-        id E23
-        habilitacoes 3
+        nome E15
         vagas 2
+        habilidades_Requeridas 3, 1
     ]
-    node
+    vertice
     [
-        id E24
-        habilitacoes 3
-        vagas 1
-    ]
-    node
-    [
-        id E25
-        habilitacoes 3
+        nome E16
         vagas 2
+        habilidades_Requeridas 3, 1
     ]
-    node
+    vertice
     [
-        id E26
-        habilitacoes 2
-        vagas 1
-    ]
-    node
-    [
-        id E27
-        habilitacoes 2
+        nome E17
         vagas 2
+        habilidades_Requeridas 3, 1
     ]
-    node
+    vertice
     [
-        id E28
-        habilitacoes 2
-        vagas 1
-    ]
-    node
-    [
-        id E29
-        habilitacoes 2
+        nome E18
         vagas 2
+        habilidades_Requeridas 3, 1
     ]
-    node
+    vertice
     [
-        id E30
-        habilitacoes 2
+        nome E19
         vagas 2
+        habilidades_Requeridas 3, 2
     ]
-    node
+    vertice
     [
-        id E31
-        habilitacoes 2
+        nome E20
         vagas 2
+        habilidades_Requeridas 3, 2
     ]
-    node
+    vertice
     [
-        id E32
-        habilitacoes 2
+        nome E21
         vagas 2
+        habilidades_Requeridas 3, 2
     ]
-    node
+    vertice
     [
-        id E33
-        habilitacoes 2
+        nome E22
         vagas 2
+        habilidades_Requeridas 3, 1
     ]
-    node
+    vertice
     [
-        id E34
-        habilitacoes 2
+        nome E23
         vagas 2
+        habilidades_Requeridas 3, 2
     ]
-    node
+    vertice
     [
-        id E35
-        habilitacoes 2
-        vagas 1
-    ]
-    node
-    [
-        id E36
-        habilitacoes 2
-        vagas 1
-    ]
-    node
-    [
-        id E37
-        habilitacoes 2
-        vagas 1
-    ]
-    node
-    [
-        id E38
-        habilitacoes 2
-        vagas 1
-    ]
-    node
-    [
-        id E39
-        habilitacoes 2
-        vagas 1
-    ]
-    node
-    [
-        id E40
-        habilitacoes 2
-        vagas 1
-    ]
-    node
-    [
-        id E41
-        habilitacoes 2
+        nome E24
         vagas 2
+        habilidades_Requeridas 3, 1
     ]
-    node
+    vertice
     [
-        id E42
-        habilitacoes 2
-        vagas 3
-    ]
-    node
-    [
-        id E43
-        habilitacoes 3
+        nome E25
         vagas 2
+        habilidades_Requeridas 3, 2
     ]
-    node
+    vertice
     [
-        id E44
-        habilitacoes 2
-        vagas 3
+        nome E26
+        vagas 2
+        habilidades_Requeridas 2, 1
     ]
-    node
+    vertice
     [
-        id E45
-        habilitacoes 2
-        vagas 3
+        nome E27
+        vagas 2
+        habilidades_Requeridas 2, 2
     ]
-    node
+    vertice
     [
-        id E46
-        habilitacoes 2
-        vagas 3
+        nome E28
+        vagas 2
+        habilidades_Requeridas 2, 1
     ]
-    node
+    vertice
     [
-        id E47
-        habilitacoes 2
-        vagas 3
+        nome E29
+        vagas 2
+        habilidades_Requeridas 2, 2
     ]
-    node
+    vertice
     [
-        id E48
-        habilitacoes 2
-        vagas 3
+        nome E30
+        vagas 2
+        habilidades_Requeridas 2, 2
     ]
-    node
+    vertice
     [
-        id E49
-        habilitacoes 2
-        vagas 1
+        nome E31
+        vagas 2
+        habilidades_Requeridas 2, 2
     ]
-    node
+    vertice
     [
-        id E50
-        habilitacoes 2
-        vagas 1
+        nome E32
+        vagas 2
+        habilidades_Requeridas 2, 2
     ]
-]
+    vertice
+    [
+        nome E33
+        vagas 2
+        habilidades_Requeridas 2, 2
+    ]
+    vertice
+    [
+        nome E34
+        vagas 2
+        habilidades_Requeridas 2, 2
+    ]
+    vertice
+    [
+        nome E35
+        vagas 2
+        habilidades_Requeridas 2, 1
+    ]
+    vertice
+    [
+        nome E36
+        vagas 2
+        habilidades_Requeridas 2, 1
+    ]
+    vertice
+    [
+        nome E37
+        vagas 2
+        habilidades_Requeridas 2, 1
+    ]
+    vertice
+    [
+        nome E38
+        vagas 2
+        habilidades_Requeridas 2, 1
+    ]
+    vertice
+    [
+        nome E39
+        vagas 2
+        habilidades_Requeridas 2, 1
+    ]
+    vertice
+    [
+        nome E40
+        vagas 2
+        habilidades_Requeridas 2, 1
+    ]
+    vertice
+    [
+        nome E41
+        vagas 2
+        habilidades_Requeridas 2, 2
+    ]
+    vertice
+    [
+        nome E42
+        vagas 2
+        habilidades_Requeridas 2, 3
+    ]
+    vertice
+    [
+        nome E43
+        vagas 2
+        habilidades_Requeridas 3, 2
+    ]
+    vertice
+    [
+        nome E44
+        vagas 2
+        habilidades_Requeridas 2, 3
+    ]
+    vertice
+    [
+        nome E45
+        vagas 2
+        habilidades_Requeridas 2, 3
+    ]
+    vertice
+    [
+        nome E46
+        vagas 2
+        habilidades_Requeridas 2, 3
+    ]
+    vertice
+    [
+        nome E47
+        vagas 2
+        habilidades_Requeridas 2, 3
+    ]
+    vertice
+    [
+        nome E48
+        vagas 2
+        habilidades_Requeridas 2, 3
+    ]
+    vertice
+    [
+        nome E49
+        vagas 2
+        habilidades_Requeridas 2, 1
+    ]
+    vertice
+    [
+        nome E50
+        vagas 2
+        habilidades_Requeridas 2, 1
+    ]
+]fim

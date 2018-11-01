@@ -1,4 +1,4 @@
-#include "grafo.h"
+#include "grafo.cpp"
 
 using namespace std;
 
@@ -7,6 +7,9 @@ int main() {
     Grafo grafo;
     grafo.setProfessores();
     grafo.setEscolas();
+    grafo.calculaEmparelhamentoEstavel();
+
+    cout << grafo.getEscolas().size() << endl;
 
     vector<Professor> professores = grafo.getProfessores();
     vector<Escola> escolas = grafo.getEscolas();
@@ -30,8 +33,19 @@ int main() {
 
     for(auto i : escolas) {
         cout << i.getId() << endl;
-        cout << "Habilitacoes: " << i.getHabilitacoes() << endl;
+        vector<int> habilitacoes = i.getHabilitacoes();
+        cout << "Habilitacoes: " ;
+        for(auto habilitacao : habilitacoes) {
+            cout << habilitacao << " ";
+        }
+        cout << endl;
         cout << "Vagas: " << i.getVagas() << "\n\n";
+    }
+
+    cout << "\tEMPARELHAMENTOS\n\n";
+
+    for(auto i : professores) {
+        cout << i.getId() << " emparelhado com: " << i.get_emparelhamento().getId() << endl;
     }
 
     return 0;
