@@ -5,6 +5,8 @@
 
 using namespace std;
 
+class Professor;
+
 class Escola {
 
     private:
@@ -12,11 +14,13 @@ class Escola {
         string id;
         vector<int> habilitacoes;
         int vagas;
+        vector<Professor> professoresEmparelhados;
 
     public:
 
         Escola() {}
         Escola(string id, vector<int> habilitacoes, int vagas) {
+            professoresEmparelhados.reserve(2);
             this->setId(id);
             this->setHabilitacoes(habilitacoes);
             this->setVagas(vagas);
@@ -42,9 +46,13 @@ class Escola {
             return this->vagas;
         }
 
-        bool get_emparelhado() {
-            return false;
-        }; // Estara emparelhado com um professor, ou com dois professores?
+        void set_emparelhamento(Professor &professor, int pos);
+
+        bool get_emparelhado(int pos);
+
+        vector<Professor> get_emparelhados() {
+            return this->professoresEmparelhados;
+        }
 };
 
 class Professor {
@@ -85,7 +93,8 @@ class Professor {
             return this->interesses;
         }
 
-        void set_emparelhamento(Escola escola) {
+        void set_emparelhamento(Escola &escola) {
+            cout << "Passei aqui: " << escola.getId() << endl;
             this->escolaEmparelhada = escola;
         }
 

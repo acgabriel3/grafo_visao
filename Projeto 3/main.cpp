@@ -9,10 +9,10 @@ int main() {
     grafo.setEscolas();
     grafo.calculaEmparelhamentoEstavel();
 
-    cout << grafo.getEscolas().size() << endl;
-
     vector<Professor> professores = grafo.getProfessores();
     vector<Escola> escolas = grafo.getEscolas();
+
+
 
     cout << "\tPROFESSORES\n\n";
 
