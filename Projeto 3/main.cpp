@@ -13,7 +13,7 @@ int main() {
     vector<Escola> escolas = grafo.getEscolas();
 
 
-
+    /*
     cout << "\tPROFESSORES\n\n";
 
     for(auto i : professores) {
@@ -42,10 +42,17 @@ int main() {
         cout << "Vagas: " << i.getVagas() << "\n\n";
     }
 
+
+
     cout << "\tEMPARELHAMENTOS\n\n";
 
     for(auto i : professores) {
         cout << i.getId() << " emparelhado com: " << i.get_emparelhamento().getId() << endl;
+    }
+    */
+
+    for(auto i : escolas) {
+        cout << "escola: " << i.getId() << " prof 1: " << i.get_emparelhados()[1].getId() << " prof 2: " <<  i.get_emparelhados()[2].getId() << endl;
     }
 
     return 0;
