@@ -170,6 +170,7 @@ void Grafo::calculaEmparelhamentoEstavel() {
 
     int contador = 0;
     int pos;
+    vector<int> posExcluidos;
 
     cout << "pos 1" << endl;
 
@@ -177,7 +178,7 @@ void Grafo::calculaEmparelhamentoEstavel() {
 
         contador++;
         cout << "contador: " << contador << endl;
-        if(contador == 20000) {
+        if(contador == 100000) {
             cout << "sai da funcao" << endl;
             break;
         }
@@ -187,10 +188,50 @@ void Grafo::calculaEmparelhamentoEstavel() {
 
         //Pode virar um metodo
         for(int i = 0; i < this->professores.size(); i++) {
+
+
+            for(auto position : posExcluidos) {
+                if(position == i) {
+                        cout << "-----------------------------aqui" << endl;
+                    i++;
+                }
+            }
             if(!this->professores[i].get_emparelhado()) { //Checa se nao esta emparelhado
                     if(professorAux.getId() == this->professores[i].getId()) {
+                        posExcluidos.push_back(i);
+                        cout << "----------------------------------pos: " << i << endl;
                         continue;
                     }
+
+                    /* investigar porque estou obtendo um loop infinito
+                    bool loopInfinito = true;
+
+                    for(auto preferencias : this->professores[i].getInteresses()) {
+                        int posEscolaLoop;
+                        for(int j = 0; j < this->escolas.size(); j++) {
+                            if(this->escolas[j].getId() == preferencias) {
+                                posEscolaLoop = j;
+                                break;
+                            }
+                        }
+                        if(!this->escolas[posEscolaLoop].get_emparelhados().empty()) {
+                            for(auto professorNaEscola : this->escolas[posEscolaLoop].get_emparelhados()) {
+                                if(professorNaEscola.getHabilitacoes() < this->professores[i].getHabilitacoes()) {
+                                    loopInfinito = false;
+                                }
+                            }
+                        } else {
+                            loopInfinito = false;
+                        }
+                    }
+
+
+                    if(loopInfinito) {
+                        continue;
+                    }
+                    */
+
+
                     professorAux = this->professores[i];
                     cout << "professor nao emparelhado: " << professorAux.getId() << endl;
                     pos = i;
@@ -207,6 +248,10 @@ void Grafo::calculaEmparelhamentoEstavel() {
 
                 cout << "pos 4" << endl;
 
+
+            if(this->professores[pos].get_emparelhado()) {
+                break;
+            }
             // a variavel abaixo e o for podem virar um metodo
             Escola escolaAtual;
 
@@ -242,10 +287,6 @@ void Grafo::calculaEmparelhamentoEstavel() {
                 int retiraProf = -1;
 
                 for(auto preferencia : escolaAtual.getHabilitacoes()) {
-
-                    if(this->professores[pos].get_emparelhado()) {
-                        break;
-                    }
 
                     posPreferencia++;
                     cout << "------------------------" << professorAux.get_emparelhado() << endl;
