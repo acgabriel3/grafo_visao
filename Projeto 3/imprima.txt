@@ -1,0 +1,756 @@
+	PROFESSORES
+
+P1
+Habilitacoes: 3
+Interesses: E10 E20 E1 E27 E3 
+
+P2
+Habilitacoes: 2
+Interesses: E10 E20 E2 E27 E5 
+
+P3
+Habilitacoes: 2
+Interesses: E10 E20 E3 E27 E7 
+
+P4
+Habilitacoes: 2
+Interesses: E10 E20 E4 E27 E9 
+
+P5
+Habilitacoes: 3
+Interesses: E10 E20 E5 E27 E11 
+
+P6
+Habilitacoes: 2
+Interesses: E10 E5 E6 E27 E13 
+
+P7
+Habilitacoes: 2
+Interesses: E10 E5 E7 E37 E15 
+
+P8
+Habilitacoes: 2
+Interesses: E10 E5 E8 E35 E17 
+
+P9
+Habilitacoes: 2
+Interesses: E10 E5 E9 E35 E21 
+
+P10
+Habilitacoes: 3
+Interesses: E10 E5 E7 E35 E23 
+
+P11
+Habilitacoes: 2
+Interesses: E20 E30 E11 E35 E25 
+
+P12
+Habilitacoes: 2
+Interesses: E20 E30 E12 E35 E27 
+
+P13
+Habilitacoes: 2
+Interesses: E20 E30 E13 E35 E29 
+
+P14
+Habilitacoes: 2
+Interesses: E20 E30 E14 E48 E31 
+
+P15
+Habilitacoes: 3
+Interesses: E20 E30 E15 E48 E33 
+
+P16
+Habilitacoes: 2
+Interesses: E20 E35 E16 E48 E35 
+
+P17
+Habilitacoes: 2
+Interesses: E20 E35 E17 E48 E37 
+
+P18
+Habilitacoes: 2
+Interesses: E20 E35 E18 E48 E39 
+
+P19
+Habilitacoes: 2
+Interesses: E20 E35 E19 E10 E41 
+
+P20
+Habilitacoes: 3
+Interesses: E20 E35 E30 E10 E43 
+
+P21
+Habilitacoes: 1
+Interesses: E30 E40 E21 E10 E45 
+
+P22
+Habilitacoes: 2
+Interesses: E30 E40 E22 E10 E47 
+
+P23
+Habilitacoes: 2
+Interesses: E30 E40 E23 E10 E49 
+
+P24
+Habilitacoes: 2
+Interesses: E30 E40 E24 E10 E2 
+
+P25
+Habilitacoes: 3
+Interesses: E30 E40 E25 E10 E4 
+
+P26
+Habilitacoes: 2
+Interesses: E30 E45 E26 E23 E6 
+
+P27
+Habilitacoes: 2
+Interesses: E30 E45 E27 E23 E8 
+
+P28
+Habilitacoes: 2
+Interesses: E30 E45 E28 E23 E12 
+
+P29
+Habilitacoes: 2
+Interesses: E30 E45 E29 E23 E14 
+
+P30
+Habilitacoes: 3
+Interesses: E30 E45 E3 E31 E16 
+
+P31
+Habilitacoes: 1
+Interesses: E40 E50 E31 E41 E18 
+
+P32
+Habilitacoes: 2
+Interesses: E40 E50 E32 E31 E19 
+
+P33
+Habilitacoes: 2
+Interesses: E40 E50 E33 E31 E22 
+
+P34
+Habilitacoes: 2
+Interesses: E40 E50 E34 E31 E24 
+
+P35
+Habilitacoes: 3
+Interesses: E40 E50 E35 E31 E26 
+
+P36
+Habilitacoes: 2
+Interesses: E40 E50 E36 E21 E28 
+
+P37
+Habilitacoes: 2
+Interesses: E40 E2 E37 E21 E32 
+
+P38
+Habilitacoes: 2
+Interesses: E40 E2 E38 E21 E34 
+
+P39
+Habilitacoes: 2
+Interesses: E40 E2 E39 E21 E36 
+
+P40
+Habilitacoes: 3
+Interesses: E40 E2 E4 E11 E38 
+
+P41
+Habilitacoes: 1
+Interesses: E40 E2 E41 E11 E42 
+
+P42
+Habilitacoes: 2
+Interesses: E40 E4 E42 E11 E44 
+
+P43
+Habilitacoes: 2
+Interesses: E40 E4 E43 E11 E46 
+
+P44
+Habilitacoes: 2
+Interesses: E40 E4 E44 E11 E48 
+
+P45
+Habilitacoes: 3
+Interesses: E40 E4 E45 E11 E5 
+
+P46
+Habilitacoes: 2
+Interesses: E40 E4 E46 E11 E45 
+
+P47
+Habilitacoes: 2
+Interesses: E40 E6 E47 E1 E45 
+
+P48
+Habilitacoes: 2
+Interesses: E40 E6 E48 E1 E45 
+
+P49
+Habilitacoes: 2
+Interesses: E40 E6 E49 E1 E45 
+
+P50
+Habilitacoes: 3
+Interesses: E40 E6 E50 E1 E45 
+
+P51
+Habilitacoes: 1
+Interesses: E50 E6 E49 E1 E45 
+
+P52
+Habilitacoes: 2
+Interesses: E49 E8 E48 E1 E45 
+
+P53
+Habilitacoes: 2
+Interesses: E48 E8 E47 E1 E45 
+
+P54
+Habilitacoes: 2
+Interesses: E47 E8 E46 E1 E45 
+
+P55
+Habilitacoes: 3
+Interesses: E46 E8 E45 E1 E45 
+
+P56
+Habilitacoes: 2
+Interesses: E45 E8 E44 E2 E25 
+
+P57
+Habilitacoes: 2
+Interesses: E44 E8 E43 E3 E25 
+
+P58
+Habilitacoes: 2
+Interesses: E43 E8 E42 E4 E25 
+
+P59
+Habilitacoes: 2
+Interesses: E42 E8 E41 E5 E25 
+
+P60
+Habilitacoes: 3
+Interesses: E41 E8 E40 E6 E25 
+
+P61
+Habilitacoes: 1
+Interesses: E40 E8 E4 E7 E15 
+
+P62
+Habilitacoes: 2
+Interesses: E39 E12 E14 E9 E15 
+
+P63
+Habilitacoes: 2
+Interesses: E38 E12 E24 E10 E15 
+
+P64
+Habilitacoes: 2
+Interesses: E37 E12 E34 E11 E15 
+
+P65
+Habilitacoes: 3
+Interesses: E36 E12 E14 E13 E15 
+
+P66
+Habilitacoes: 2
+Interesses: E35 E12 E4 E14 E15 
+
+P67
+Habilitacoes: 2
+Interesses: E34 E12 E24 E16 E15 
+
+P68
+Habilitacoes: 2
+Interesses: E33 E12 E34 E17 E15 
+
+P69
+Habilitacoes: 2
+Interesses: E32 E12 E44 E18 E15 
+
+P70
+Habilitacoes: 3
+Interesses: E31 E12 E1 E19 E15 
+
+P71
+Habilitacoes: 1
+Interesses: E30 E12 E1 E20 E35 
+
+P72
+Habilitacoes: 2
+Interesses: E29 E12 E1 E21 E35 
+
+P73
+Habilitacoes: 2
+Interesses: E28 E13 E7 E22 E35 
+
+P74
+Habilitacoes: 2
+Interesses: E27 E13 E7 E23 E35 
+
+P75
+Habilitacoes: 3
+Interesses: E26 E13 E7 E24 E35 
+
+P76
+Habilitacoes: 2
+Interesses: E25 E13 E7 E2 E35 
+
+P77
+Habilitacoes: 2
+Interesses: E24 E13 E7 E26 E35 
+
+P78
+Habilitacoes: 2
+Interesses: E23 E13 E47 E27 E35 
+
+P79
+Habilitacoes: 2
+Interesses: E22 E27 E47 E28 E35 
+
+P80
+Habilitacoes: 3
+Interesses: E21 E27 E47 E29 E35 
+
+P81
+Habilitacoes: 1
+Interesses: E20 E27 E34 E30 E11 
+
+P82
+Habilitacoes: 2
+Interesses: E19 E27 E34 E31 E20 
+
+P83
+Habilitacoes: 2
+Interesses: E18 E27 E3 E32 E20 
+
+P84
+Habilitacoes: 2
+Interesses: E17 E44 E3 E33 E20 
+
+P85
+Habilitacoes: 3
+Interesses: E16 E44 E3 E34 E20 
+
+P86
+Habilitacoes: 2
+Interesses: E15 E44 E3 E35 E20 
+
+P87
+Habilitacoes: 2
+Interesses: E14 E44 E4 E36 E20 
+
+P88
+Habilitacoes: 2
+Interesses: E13 E44 E4 E37 E20 
+
+P89
+Habilitacoes: 2
+Interesses: E12 E44 E4 E38 E20 
+
+P90
+Habilitacoes: 3
+Interesses: E11 E44 E4 E39 E20 
+
+P91
+Habilitacoes: 1
+Interesses: E10 E47 E4 E40 E1 
+
+P92
+Habilitacoes: 2
+Interesses: E9 E47 E4 E41 E1 
+
+P93
+Habilitacoes: 2
+Interesses: E8 E47 E4 E42 E1 
+
+P94
+Habilitacoes: 2
+Interesses: E7 E47 E4 E43 E1 
+
+P95
+Habilitacoes: 3
+Interesses: E6 E47 E4 E44 E1 
+
+P96
+Habilitacoes: 2
+Interesses: E5 E47 E4 E45 E1 
+
+P97
+Habilitacoes: 2
+Interesses: E4 E47 E14 E46 E1 
+
+P98
+Habilitacoes: 2
+Interesses: E3 E47 E4 E48 E1 
+
+P99
+Habilitacoes: 2
+Interesses: E2 E47 E4 E49 E1 
+
+P100
+Habilitacoes: 3
+Interesses: E1 E47 E4 E50 E10 
+
+	ESCOLAS
+
+E1
+Habilitacoes: 2 
+Vagas: 1
+
+E2
+Habilitacoes: 2 
+Vagas: 1
+
+E3
+Habilitacoes: 3 
+Vagas: 1
+
+E4
+Habilitacoes: 2 
+Vagas: 1
+
+E5
+Habilitacoes: 2 
+Vagas: 1
+
+E6
+Habilitacoes: 2 
+Vagas: 1
+
+E7
+Habilitacoes: 3 
+Vagas: 1
+
+E8
+Habilitacoes: 3 
+Vagas: 1
+
+E9
+Habilitacoes: 2 
+Vagas: 1
+
+E10
+Habilitacoes: 1 2 
+Vagas: 2
+
+E11
+Habilitacoes: 3 3 
+Vagas: 2
+
+E12
+Habilitacoes: 3 3 
+Vagas: 2
+
+E13
+Habilitacoes: 3 3 
+Vagas: 2
+
+E14
+Habilitacoes: 3 2 
+Vagas: 2
+
+E15
+Habilitacoes: 3 1 
+Vagas: 2
+
+E16
+Habilitacoes: 3 1 
+Vagas: 2
+
+E17
+Habilitacoes: 3 1 
+Vagas: 2
+
+E18
+Habilitacoes: 3 1 
+Vagas: 2
+
+E19
+Habilitacoes: 3 2 
+Vagas: 2
+
+E20
+Habilitacoes: 3 2 
+Vagas: 2
+
+E21
+Habilitacoes: 3 2 
+Vagas: 2
+
+E22
+Habilitacoes: 3 1 
+Vagas: 2
+
+E23
+Habilitacoes: 3 2 
+Vagas: 2
+
+E24
+Habilitacoes: 3 1 
+Vagas: 2
+
+E25
+Habilitacoes: 3 2 
+Vagas: 2
+
+E26
+Habilitacoes: 2 1 
+Vagas: 2
+
+E27
+Habilitacoes: 2 2 
+Vagas: 2
+
+E28
+Habilitacoes: 2 1 
+Vagas: 2
+
+E29
+Habilitacoes: 2 2 
+Vagas: 2
+
+E30
+Habilitacoes: 2 2 
+Vagas: 2
+
+E31
+Habilitacoes: 2 2 
+Vagas: 2
+
+E32
+Habilitacoes: 2 2 
+Vagas: 2
+
+E33
+Habilitacoes: 2 2 
+Vagas: 2
+
+E34
+Habilitacoes: 2 2 
+Vagas: 2
+
+E35
+Habilitacoes: 2 1 
+Vagas: 2
+
+E36
+Habilitacoes: 2 1 
+Vagas: 2
+
+E37
+Habilitacoes: 2 1 
+Vagas: 2
+
+E38
+Habilitacoes: 2 1 
+Vagas: 2
+
+E39
+Habilitacoes: 2 1 
+Vagas: 2
+
+E40
+Habilitacoes: 2 1 
+Vagas: 2
+
+E41
+Habilitacoes: 2 2 
+Vagas: 2
+
+E42
+Habilitacoes: 2 3 
+Vagas: 2
+
+E43
+Habilitacoes: 3 2 
+Vagas: 2
+
+E44
+Habilitacoes: 2 3 
+Vagas: 2
+
+E45
+Habilitacoes: 2 3 
+Vagas: 2
+
+E46
+Habilitacoes: 2 3 
+Vagas: 2
+
+E47
+Habilitacoes: 2 3 
+Vagas: 2
+
+E48
+Habilitacoes: 2 3 
+Vagas: 2
+
+E49
+Habilitacoes: 2 1 
+Vagas: 2
+
+E50
+Habilitacoes: 2 1 
+Vagas: 2
+
+	EMPARELHAMENTOS
+
+P1 emparelhado com: E1
+P2 emparelhado com: E2
+P3 emparelhado com: E10
+P4 emparelhado com: E4
+P5 emparelhado com: E5
+P6 emparelhado com: E6
+P7 emparelhado com: E37
+P8 emparelhado com: E35
+P9 emparelhado com: E9
+P10 emparelhado com: E7
+P11 emparelhado com: E30
+P12 emparelhado com: E27
+P13 emparelhado com: E29
+P14 emparelhado com: E31
+P15 emparelhado com: E15
+P16 emparelhado com: E48
+P17 emparelhado com: E17
+P18 emparelhado com: E39
+P19 emparelhado com: E41
+P20 emparelhado com: E20
+P21 emparelhado com: E40
+P22 emparelhado com: E40
+P23 emparelhado com: E49
+P24 emparelhado com: E10
+P25 emparelhado com: E25
+P26 emparelhado com: E26
+P27 emparelhado com: E45
+P28 emparelhado com: E28
+P29 emparelhado com: E14
+P30 emparelhado com: E3
+P31 emparelhado com: E18
+P32 emparelhado com: E32
+P33 emparelhado com: E33
+P34 emparelhado com: E34
+P35 emparelhado com: E50
+P36 emparelhado com: E36
+P37 emparelhado com: E21
+P38 emparelhado com: E38
+P39 emparelhado com: E36
+P40 emparelhado com: E11
+P41 emparelhado com: 
+P42 emparelhado com: E42
+P43 emparelhado com: E46
+P44 emparelhado com: E44
+P45 emparelhado com: E11
+P46 emparelhado com: 
+P47 emparelhado com: E47
+P48 emparelhado com: 
+P49 emparelhado com: E49
+P50 emparelhado com: E45
+P51 emparelhado com: E50
+P52 emparelhado com: 
+P53 emparelhado com: 
+P54 emparelhado com: 
+P55 emparelhado com: E8
+P56 emparelhado com: E25
+P57 emparelhado com: E43
+P58 emparelhado com: 
+P59 emparelhado com: E41
+P60 emparelhado com: 
+P61 emparelhado com: E15
+P62 emparelhado com: E39
+P63 emparelhado com: E24
+P64 emparelhado com: E34
+P65 emparelhado com: E12
+P66 emparelhado com: E35
+P67 emparelhado com: E16
+P68 emparelhado com: E33
+P69 emparelhado com: E32
+P70 emparelhado com: E19
+P71 emparelhado com: 
+P72 emparelhado com: E29
+P73 emparelhado com: E22
+P74 emparelhado com: E23
+P75 emparelhado com: E13
+P76 emparelhado com: 
+P77 emparelhado com: E26
+P78 emparelhado com: E27
+P79 emparelhado com: E28
+P80 emparelhado com: E21
+P81 emparelhado com: 
+P82 emparelhado com: E19
+P83 emparelhado com: E20
+P84 emparelhado com: 
+P85 emparelhado com: E16
+P86 emparelhado com: 
+P87 emparelhado com: 
+P88 emparelhado com: E37
+P89 emparelhado com: E38
+P90 emparelhado com: E44
+P91 emparelhado com: 
+P92 emparelhado com: 
+P93 emparelhado com: 
+P94 emparelhado com: 
+P95 emparelhado com: E47
+P96 emparelhado com: 
+P97 emparelhado com: 
+P98 emparelhado com: 
+P99 emparelhado com: 
+P100 emparelhado com: 
+escola: E1 prof 1: P1
+escola: E2 prof 1: P2
+escola: E3 prof 1: P30
+escola: E4 prof 1: P4
+escola: E5 prof 1: P5
+escola: E6 prof 1: P6
+escola: E7 prof 1: P10
+escola: E8 prof 1: P55
+escola: E9 prof 1: P9
+escola: E10 prof 1: P3 prof 2: P24
+escola: E11 prof 1: P40 prof 2: P45
+escola: E12 prof 1: P65
+escola: E13 prof 1: P75
+escola: E14 prof 1:  prof 2: P29
+escola: E15 prof 1: P15 prof 2: P61
+escola: E16 prof 1: P85 prof 2: P67
+escola: E17 prof 1:  prof 2: P17
+escola: E18 prof 1:  prof 2: P31
+escola: E19 prof 1: P70 prof 2: P82
+escola: E20 prof 1: P20 prof 2: P83
+escola: E21 prof 1: P80 prof 2: P37
+escola: E22 prof 1:  prof 2: P73
+escola: E23 prof 1:  prof 2: P74
+escola: E24 prof 1:  prof 2: P63
+escola: E25 prof 1: P25 prof 2: P56
+escola: E26 prof 1: P26 prof 2: P77
+escola: E27 prof 1: P12 prof 2: P78
+escola: E28 prof 1: P28 prof 2: P79
+escola: E29 prof 1: P13 prof 2: P72
+escola: E30 prof 1: P11
+escola: E31 prof 1: P14
+escola: E32 prof 1: P32 prof 2: P69
+escola: E33 prof 1: P33 prof 2: P68
+escola: E34 prof 1: P34 prof 2: P64
+escola: E35 prof 1: P8 prof 2: P66
+escola: E36 prof 1: P36 prof 2: P39
+escola: E37 prof 1: P7 prof 2: P88
+escola: E38 prof 1: P38 prof 2: P89
+escola: E39 prof 1: P18 prof 2: P62
+escola: E40 prof 1: P22 prof 2: P21
+escola: E41 prof 1: P19 prof 2: P59
+escola: E42 prof 1: P42
+escola: E43 prof 1:  prof 2: P57
+escola: E44 prof 1: P44 prof 2: P90
+escola: E45 prof 1: P27 prof 2: P50
+escola: E46 prof 1: P43
+escola: E47 prof 1: P47 prof 2: P95
+escola: E48 prof 1: P16
+escola: E49 prof 1: P23 prof 2: P49
+escola: E50 prof 1: P35 prof 2: P51

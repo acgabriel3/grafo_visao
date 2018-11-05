@@ -214,6 +214,11 @@ void Grafo::calculaEmparelhamentoEstavel() {
                                 break;
                             }
                         }
+                        for(auto preferencias : this->escolas[posEscolaLoop].getHabilitacoes()) {
+                            if(preferencias < this->professores[i].getHabilitacoes()) {
+                                loopInfinito = false;
+                            }
+                        }
                         if(!this->escolas[posEscolaLoop].get_emparelhados().empty()) {
                             for(auto professorNaEscola : this->escolas[posEscolaLoop].get_emparelhados()) {
                                 if(professorNaEscola.getHabilitacoes() < this->professores[i].getHabilitacoes()) {
@@ -227,9 +232,10 @@ void Grafo::calculaEmparelhamentoEstavel() {
 
 
                     if(loopInfinito) {
-                        continue;
+                        i++;
                     }
                     */
+
 
 
                     professorAux = this->professores[i];
@@ -389,7 +395,130 @@ void Grafo::calculaEmparelhamentoEstavel() {
 
 
 
+void Grafo::calculaEmparelhamentoEscola() {
 
+    bool condicoesInsatisfeitas = true;
+    int contador = 0;
+
+    int posPreferencia = 0;
+
+    while(condicoesInsatisfeitas) {
+        contador++;
+        if(contador == 5000) {
+            break;
+        }
+
+
+        for(int escola = 0; escola < this->escolas.size(); escola++) {
+            if(this->escolas[escola].get_emparelhado(posPreferencia + 1)) {
+                continue;
+            } else if(this->escolas[escola].getHabilitacoes().size() < (posPreferencia + 1)) {
+                continue;
+            }
+
+            int preferencia = this->escolas[escola].getHabilitacoes()[posPreferencia];
+
+            for(int professor = 0; professor < this->professores.size(); professor++) {
+                if(this->professores[professor].getHabilitacoes() >= preferencia) {
+                    if(this->professores[professor].get_emparelhado()) {
+
+                        int posPreferenciaProf = -1;
+                        for(int preferenciaProf = 0; preferenciaProf < this->professores[professor].getInteresses().size(); preferenciaProf++){
+
+                            if(this->professores[professor].getInteresses()[preferenciaProf] == this->escolas[escola].getId()){
+                                posPreferenciaProf = preferenciaProf;
+                                break;
+                            }
+                        }
+
+                        if(posPreferenciaProf > -1) {
+                            int posPreferenciaAtual = -1;
+                            for(int preferenciaAtual = 0; preferenciaAtual < this->professores[professor].getInteresses().size(); preferenciaAtual++){
+                                if(this->professores[professor].getInteresses()[posPreferenciaProf] == this->professores[professor].get_emparelhamento().getId()){
+                                    posPreferenciaAtual = preferenciaAtual;
+                                    break;
+                                }
+                            }
+                            if(posPreferenciaProf < posPreferenciaAtual) {
+                                cout << "---------------Visao1" << endl;
+                                this->professores[professor].set_emparelhamento(this->escolas[escola]);
+                                this->escolas[escola].set_emparelhamento(this->professores[professor], posPreferencia + 1);
+                                Professor vazio;
+                                int posEscolaSubstituida = -1;
+                                for(int escolaSubstituida = 0; escolaSubstituida < this->escolas.size(); escolaSubstituida++) {
+                                    if(this->escolas[escolaSubstituida].getId() == this->professores[professor].getInteresses()[posPreferenciaAtual]) {
+                                        posEscolaSubstituida = escolaSubstituida;
+                                    }
+                                }
+                                this->escolas[posEscolaSubstituida].set_emparelhamento(vazio, posPreferencia + 1);
+                                break;
+                            } else {
+                                continue;
+                            }
+                        } else {
+                            continue;
+                        }
+
+                     } else { //PArece que estou fechando erroneamente da mesma maneira o loop
+
+                        int posPreferenciaProf = -1;
+                        for(int preferenciaProf = 0; preferenciaProf < this->professores[professor].getInteresses().size(); preferenciaProf++){
+
+                            if(this->professores[professor].getInteresses()[preferenciaProf] == this->escolas[escola].getId()){
+                                posPreferenciaProf = preferenciaProf;
+                                break;
+                            }
+                        }
+
+                        if(posPreferenciaProf > -1) {
+                            cout << "---------------Visao2" << endl;
+                            this->professores[professor].set_emparelhamento(this->escolas[escola]);
+                            this->escolas[escola].set_emparelhamento(this->professores[professor], posPreferencia + 1);
+                            break;
+                        } else {
+                            continue;
+                        }
+
+                        }
+
+                    }
+                }
+            }
+
+
+        if(posPreferencia < 1) {
+            posPreferencia++;
+        } else {
+            posPreferencia = 0;
+        }
+    }
+
+}
+
+void Grafo::checaDiferenca() {
+
+    bool professoresDiferentes = true;
+    vector<Professor> profEmparelhados;
+
+    for(int i = 0; i < this->escolas.size(); i++) {
+        for(int j = 0; j < this->escolas[i].get_emparelhados().size(); j++) {
+            for(auto professor : profEmparelhados) {
+                if(this->escolas[i].get_emparelhados()[j].getId() == professor.getId()) {
+                    professoresDiferentes = false;
+                    cout << "professor repetido: " << professor.getId() << endl;
+                    break;
+                }
+            }
+            if(!professoresDiferentes) {
+                break;
+            }
+            profEmparelhados.push_back(this->escolas[i].get_emparelhados()[j]);
+        }
+    }
+
+    cout << "professores nao repetido: " << professoresDiferentes << endl;
+
+}
 
 
 

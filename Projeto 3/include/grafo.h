@@ -132,6 +132,9 @@ class Grafo { //Pensar em comos sera formado um emparelhamento
         }
 
         void calculaEmparelhamentoEstavel();
+        void calculaEmparelhamentoEscola();
+        void checaDiferenca();
+
 };
 
 #endif

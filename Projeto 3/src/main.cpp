@@ -8,47 +8,55 @@ int main() {
     Grafo grafo;
     grafo.setProfessores();
     grafo.setEscolas();
-    grafo.calculaEmparelhamentoEstavel();
+    //grafo.calculaEmparelhamentoEstavel();
+    grafo.calculaEmparelhamentoEscola();
 
     vector<Professor> professores = grafo.getProfessores();
     vector<Escola> escolas = grafo.getEscolas();
 
+    ofstream x;
+    x.open("imprima.txt", ios::app);
+    if(!x.is_open()) {
+        cout << "kkkkkkkk";
+        exit(EXIT_FAILURE);
+    }
+
     ///*
-    cout << "\tPROFESSORES\n\n";
+    x << "\tPROFESSORES\n\n";
 
     for(auto i : professores) {
-        cout << i.getId() << endl;
-        cout << "Habilitacoes: " << i.getHabilitacoes() << endl;
+        x << i.getId() << endl;
+        x << "Habilitacoes: " << i.getHabilitacoes() << endl;
 
         vector<string> interesses = i.getInteresses();
 
-        cout << "Interesses: ";
+        x << "Interesses: ";
         for(auto j : interesses) {
-            cout << j << " ";
+            x << j << " ";
         }
-        cout << "\n\n";
+        x << "\n\n";
     }
 
 
-    cout << "\tESCOLAS\n\n";
+    x << "\tESCOLAS\n\n";
 
     for(auto i : escolas) {
-        cout << i.getId() << endl;
+        x << i.getId() << endl;
         vector<int> habilitacoes = i.getHabilitacoes();
-        cout << "Habilitacoes: " ;
+        x << "Habilitacoes: " ;
         for(auto habilitacao : habilitacoes) {
-            cout << habilitacao << " ";
+            x << habilitacao << " ";
         }
-        cout << endl;
-        cout << "Vagas: " << i.getVagas() << "\n\n";
+        x << endl;
+        x << "Vagas: " << i.getVagas() << "\n\n";
     }
 
 
 
-    cout << "\tEMPARELHAMENTOS\n\n";
+    x << "\tEMPARELHAMENTOS\n\n";
 
     for(auto i : professores) {
-        cout << i.getId() << " emparelhado com: " << i.get_emparelhamento().getId() << endl;
+        x << i.getId() << " emparelhado com: " << i.get_emparelhamento().getId() << endl;
     }
 
 
@@ -59,14 +67,15 @@ int main() {
 
     for(auto i : escolas) {
         if(i.get_emparelhados().size() == 2) {
-            cout << "escola: " << i.getId();
-            cout << " prof 1: " << i.get_emparelhados()[0].getId();
-            cout << " prof 2: " << i.get_emparelhados()[1].getId() << endl;
+            x << "escola: " << i.getId();
+            x << " prof 1: " << i.get_emparelhados()[0].getId();
+            x << " prof 2: " << i.get_emparelhados()[1].getId() << endl;
         } else  if(i.get_emparelhados().size() == 1) {
-            cout << "escola: " << i.getId() << " prof 1: " << i.get_emparelhados()[0].getId() << endl;
+            x << "escola: " << i.getId() << " prof 1: " << i.get_emparelhados()[0].getId() << endl;
         }
     }
 
+    grafo.checaDiferenca();
 
     return 0;
 }
