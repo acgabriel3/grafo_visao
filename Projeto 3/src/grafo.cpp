@@ -1,4 +1,4 @@
-#include "grafo.h"
+#include "../include/grafo.h"
 
 //******************************************************* Metodos da classe Vertice ***************************************************
 
@@ -91,9 +91,7 @@ void Grafo::setEscolas() {
 void Escola::set_emparelhamento(Professor &professor, int pos) {
 
     if(pos == 1) {
-        for(auto teste : this->professoresEmparelhados) {
-            cout << "os ja emparelhados: " << teste.getId() << endl;
-        }
+
         if(this->professoresEmparelhados.empty()) {
             this->professoresEmparelhados.push_back(professor);
         } else {
@@ -125,7 +123,7 @@ void Escola::set_emparelhamento(Professor &professor, int pos) {
 
 bool Escola::get_emparelhado(int pos) {
 
-    if(this->professoresEmparelhados.size() < 1) {
+    if(this->professoresEmparelhados.empty()) {
 
         return false;
 
@@ -149,14 +147,16 @@ bool Escola::get_emparelhado(int pos) {
 
     }
 
+    return false;
+
 }
 
 bool Professor::get_emparelhado() {
 
-    if(escolaEmparelhada.getId().empty()) {
-        return true;
-    } else {
+    if(this->escolaEmparelhada.getId().empty()) {
         return false;
+    } else {
+        return true;
     }
 
 }
@@ -171,21 +171,28 @@ void Grafo::calculaEmparelhamentoEstavel() {
     int contador = 0;
     int pos;
 
+    cout << "pos 1" << endl;
+
     while(professoresNaoEmparelhados) {
 
         contador++;
         cout << "contador: " << contador << endl;
-        if(contador == 45) {
+        if(contador == 20000) {
             cout << "sai da funcao" << endl;
-            return;
+            break;
         }
+            cout << "pos 2" << endl;
 
         professoresNaoEmparelhados = false; //Seta para falso, para que se busque em cada iteracao um professor nao emparelhado;
 
         //Pode virar um metodo
         for(int i = 0; i < this->professores.size(); i++) {
-            if(this->professores[i].get_emparelhado()) {
+            if(!this->professores[i].get_emparelhado()) { //Checa se nao esta emparelhado
+                    if(professorAux.getId() == this->professores[i].getId()) {
+                        continue;
+                    }
                     professorAux = this->professores[i];
+                    cout << "professor nao emparelhado: " << professorAux.getId() << endl;
                     pos = i;
                     professoresNaoEmparelhados = true;
 
@@ -194,51 +201,91 @@ void Grafo::calculaEmparelhamentoEstavel() {
         } //Busca um professor nao emparelhado para continuar o loop (isto devera ser mudado para satisfazer
         //as condicoes das especificacoes)
 
+            cout << "pos 3" << endl;
+
         for(auto escolaID : professorAux.getInteresses()) {
+
+                cout << "pos 4" << endl;
 
             // a variavel abaixo e o for podem virar um metodo
             Escola escolaAtual;
 
             int posEscola = 0;
 
-            for(auto escola : this->escolas) {
-                    posEscola++;
-                    if(escola.getId() == escolaID) {
-                        escolaAtual = escola;
+            for(int i = 0; i < this->escolas.size(); i++) {
+
+                    if(this->escolas[i].getId() == escolaID) {
+
+                        escolaAtual = this->escolas[i];
+                        posEscola = i;
                         break;
+
                     }
             }
 
+                cout << "pos 5" << endl;
+
+
             if(escolaAtual.getId().empty()) { //Sempre encontrarei a escola, n?
+                cout << "PAssei pela escola vazia" << endl;
                 continue;
             }
 
+                cout << "pos 7" << endl;
 
-            if(!escolaAtual.get_emparelhado(1) || !escolaAtual.get_emparelhado(2)) { // se nao estiver emparelhado (esta condicao tera de mudar pois a escola pode ter ateh dois professores
+
+
+            //if(!escolaAtual.get_emparelhado(1) || !escolaAtual.get_emparelhado(2)) { // se nao estiver emparelhado (esta condicao tera de mudar pois a escola pode ter ateh dois professores
 
                 int valor = -1;
                 int posPreferencia = 0;
+                int retiraProf = -1;
+
                 for(auto preferencia : escolaAtual.getHabilitacoes()) {
 
-                    posPreferencia++;
-
-                    if(preferencia <= professorAux.getHabilitacoes()) {
-
-                        valor = preferencia; // checa a quantidade de habilitacoes exigida pela escola
+                    if(this->professores[pos].get_emparelhado()) {
                         break;
+                    }
+
+                    posPreferencia++;
+                    cout << "------------------------" << professorAux.get_emparelhado() << endl;
+
+                    if((preferencia <= professorAux.getHabilitacoes())) {
+                        if(!escolaAtual.get_emparelhado(posPreferencia)) {
+                            valor = 1;
+                            break;
+                        } else if(escolaAtual.get_emparelhado(posPreferencia)) {
+                            if(escolaAtual.get_emparelhados()[posPreferencia - 1].getHabilitacoes() < professorAux.getHabilitacoes()) {
+                                valor = 1;
+                                for(int i = 0; i < this->professores.size(); i++) {
+                                    if(escolaAtual.get_emparelhados()[posPreferencia - 1].getId() == this->professores[i].getId()) {
+                                        retiraProf = i;
+                                        break;
+                                    }
+                                }
+                                break;
+                            }
+                        }
 
                     }
                 } // Checar se a escola esta entre as preferencias do professor
 
+                    cout << "pos 8" << endl;
 
                 if((valor > 0)) {
 
-                    this->professores[pos].set_emparelhamento(escolaAtual); //Os emparelhamentos tambem devem ser realizados na escola. Devemos salvar o id do aux para realizar isso de maneira mais eficiente
-                    cout << "reulou" << endl;
+                    this->professores[pos].set_emparelhamento(escolaAtual);
                     cout << "posicao da escola emparelhada: " << posEscola << endl;
                     cout << "posicao da preferencia: " << posPreferencia << endl;
                     cout << "posicao que sera emparelhada: " << pos << endl;
                     this->escolas[posEscola].set_emparelhamento(this->professores[pos], posPreferencia);
+
+                    if(retiraProf > 0) {
+                        Escola vazia;
+                        this->professores[retiraProf].set_emparelhamento(vazia);
+                    }
+                        cout << "pos 9" << endl;
+
                     continue;
 
 
@@ -248,15 +295,25 @@ void Grafo::calculaEmparelhamentoEstavel() {
 
                 }
 
-            } else {
+            /*}  else {
+
+                    cout << "pos 10" << endl;
 
                 int valor = -1;
                 int posPreferencia = 0;
+                int posProfMomen = 0;
                 for(auto professorMomentaneo : escolaAtual.get_emparelhados()) {
 
                     posPreferencia++;
 
-                    if(professorMomentaneo.getHabilitacoes() <= professorAux.getHabilitacoes()) { //Essa condicao podera mudar de acordo com qual tipo de professor a escola prefere
+                    if((professorMomentaneo.getHabilitacoes() <= professorAux.getHabilitacoes())) { //Essa condicao podera mudar de acordo com qual tipo de professor a escola prefere
+
+                        for(int i = 0; i < this->professores.size(); i++) {
+                            if(this->professores[i].getId() == professorAux.getId()) {
+                                posProfMomen = i;
+                                break;
+                            }
+                        }
 
                         valor = 1;
                         break;
@@ -264,20 +321,24 @@ void Grafo::calculaEmparelhamentoEstavel() {
                     }
                 } // Checa se eh um professor melhor para a escola
 
+                    cout << "pos 11" << endl;
 
                 if((valor > 0)) {
 
+                    Escola vazia;
                     this->professores[pos].set_emparelhamento(escolaAtual);
-                    cout << "2reulou" << endl;
+                    this->professores[posProfMomen].set_emparelhamento(vazia);
                     cout << "2posicao da escola emparelhada: " << posEscola << endl;
                     cout << "2posicao da preferencia: " << posPreferencia << endl;
                     cout << "2posicao que sera emparelhada: " << pos << endl;
                     this->escolas[posEscola].set_emparelhamento(this->professores[pos], posPreferencia);
+                        cout << "pos 12" << endl;
+
                     continue;
 
                 }
 
-            }
+            }*/
         }
 
     }
