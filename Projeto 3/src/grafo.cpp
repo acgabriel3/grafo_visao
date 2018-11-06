@@ -493,6 +493,56 @@ void Grafo::calculaEmparelhamentoEscola() {
         }
     }
 
+    int retiraSegunda = 1;
+    int contaAteSete = 0;
+    int posRetrasada = 5;
+    bool naoRetirouSete = true;
+
+    while(naoRetirouSete) {
+
+        for(int escola = 0; escola < this->escolas.size(); escola++) {
+
+            if(this->escolas[escola].get_emparelhados().size() < 2) {
+                continue;
+            } else if(this->escolas[escola].get_emparelhados()[0].getId().empty()) {
+                continue;
+            }
+
+            Professor professorAtual = this->escolas[escola].get_emparelhados()[retiraSegunda];
+            int posProfessor = -1;
+            for(int professor = 0; professor < this->professores.size(); professor++) {
+                if(this->professores[professor].getId() == professorAtual.getId()) {
+                    posProfessor = professor;
+                    break;
+                }
+            }
+
+            int contaPreferencia = 0;
+            for(auto preferenciasAtual : professorAtual.getInteresses()) {
+                contaPreferencia++;
+                if(preferenciasAtual == this->escolas[escola].getId()) {
+                    break;
+                }
+            }
+
+            if(contaPreferencia == posRetrasada && posProfessor > -1) {
+                Escola vazia;
+                this->professores[posProfessor].set_emparelhamento(vazia);
+                Professor vazio;
+                this->escolas[escola].set_emparelhamento(vazio, retiraSegunda + 1);
+                contaAteSete++;
+            }
+            if(contaAteSete == 7) {
+                naoRetirouSete = false;
+                break;
+            }
+
+        }
+
+        posRetrasada--;
+
+    }
+
 }
 
 void Grafo::checaDiferenca() {

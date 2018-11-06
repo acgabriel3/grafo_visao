@@ -627,7 +627,7 @@ P20 emparelhado com: E20
 P21 emparelhado com: E40
 P22 emparelhado com: E40
 P23 emparelhado com: E49
-P24 emparelhado com: E10
+P24 emparelhado com: 
 P25 emparelhado com: E25
 P26 emparelhado com: E26
 P27 emparelhado com: E45
@@ -642,29 +642,29 @@ P35 emparelhado com: E50
 P36 emparelhado com: E36
 P37 emparelhado com: E21
 P38 emparelhado com: E38
-P39 emparelhado com: E36
+P39 emparelhado com: 
 P40 emparelhado com: E11
 P41 emparelhado com: 
 P42 emparelhado com: E42
 P43 emparelhado com: E46
 P44 emparelhado com: E44
-P45 emparelhado com: E11
+P45 emparelhado com: 
 P46 emparelhado com: 
 P47 emparelhado com: E47
 P48 emparelhado com: 
 P49 emparelhado com: E49
-P50 emparelhado com: E45
+P50 emparelhado com: 
 P51 emparelhado com: E50
 P52 emparelhado com: 
 P53 emparelhado com: 
 P54 emparelhado com: 
 P55 emparelhado com: E8
-P56 emparelhado com: E25
+P56 emparelhado com: 
 P57 emparelhado com: E43
 P58 emparelhado com: 
 P59 emparelhado com: E41
 P60 emparelhado com: 
-P61 emparelhado com: E15
+P61 emparelhado com: 
 P62 emparelhado com: E39
 P63 emparelhado com: E24
 P64 emparelhado com: E34
@@ -686,7 +686,7 @@ P79 emparelhado com: E28
 P80 emparelhado com: E21
 P81 emparelhado com: 
 P82 emparelhado com: E19
-P83 emparelhado com: E20
+P83 emparelhado com: 
 P84 emparelhado com: 
 P85 emparelhado com: E16
 P86 emparelhado com: 
@@ -713,22 +713,22 @@ escola: E6 prof 1: P6
 escola: E7 prof 1: P10
 escola: E8 prof 1: P55
 escola: E9 prof 1: P9
-escola: E10 prof 1: P3 prof 2: P24
-escola: E11 prof 1: P40 prof 2: P45
+escola: E10 prof 1: P3 prof 2: 
+escola: E11 prof 1: P40 prof 2: 
 escola: E12 prof 1: P65
 escola: E13 prof 1: P75
 escola: E14 prof 1:  prof 2: P29
-escola: E15 prof 1: P15 prof 2: P61
+escola: E15 prof 1: P15 prof 2: 
 escola: E16 prof 1: P85 prof 2: P67
 escola: E17 prof 1:  prof 2: P17
 escola: E18 prof 1:  prof 2: P31
 escola: E19 prof 1: P70 prof 2: P82
-escola: E20 prof 1: P20 prof 2: P83
+escola: E20 prof 1: P20 prof 2: 
 escola: E21 prof 1: P80 prof 2: P37
 escola: E22 prof 1:  prof 2: P73
 escola: E23 prof 1:  prof 2: P74
 escola: E24 prof 1:  prof 2: P63
-escola: E25 prof 1: P25 prof 2: P56
+escola: E25 prof 1: P25 prof 2: 
 escola: E26 prof 1: P26 prof 2: P77
 escola: E27 prof 1: P12 prof 2: P78
 escola: E28 prof 1: P28 prof 2: P79
@@ -739,7 +739,7 @@ escola: E32 prof 1: P32 prof 2: P69
 escola: E33 prof 1: P33 prof 2: P68
 escola: E34 prof 1: P34 prof 2: P64
 escola: E35 prof 1: P8 prof 2: P66
-escola: E36 prof 1: P36 prof 2: P39
+escola: E36 prof 1: P36 prof 2: 
 escola: E37 prof 1: P7 prof 2: P88
 escola: E38 prof 1: P38 prof 2: P89
 escola: E39 prof 1: P18 prof 2: P62
@@ -748,7 +748,7 @@ escola: E41 prof 1: P19 prof 2: P59
 escola: E42 prof 1: P42
 escola: E43 prof 1:  prof 2: P57
 escola: E44 prof 1: P44 prof 2: P90
-escola: E45 prof 1: P27 prof 2: P50
+escola: E45 prof 1: P27 prof 2: 
 escola: E46 prof 1: P43
 escola: E47 prof 1: P47 prof 2: P95
 escola: E48 prof 1: P16
