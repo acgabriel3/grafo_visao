@@ -5,27 +5,75 @@
 
 using namespace std;
 
+class Vertice {
+
+    private:
+
+        string nome;
+        int id;
+        vector<Vertice> adjascenteDest;
+
+
+    public:
+
+        void set_id(int id) {
+            this->id = id;
+        }
+
+        int get_id() {
+            return this->id;
+        }
+
+        void set_nome(string nome) {
+            this->nome = nome;
+        }
+
+        string get_nome() {
+            return this->nome;
+        }
+
+        void set_adjascentes(vector<Vertice> adjascenteDest) {
+            this->adjascenteDest = adjascenteDest;
+        }
+
+        vector<Vertice> get_adjascentes() {
+            return this->adjascenteDest;
+        }
+
+        void set_adjascente(Vertice vertice) {
+            this->adjascenteDest.push_back(vertice);
+        }
+
+
+};
+
 class Grafo {
 
     private:
 
-        vector<vector<int>> grafo; 
+        vector<Vertice> vertices;
 
     public:
 
         Grafo() {}
-        Grafo(int n) : grafo(n) {}
 
-        void make_path(int a, int b) {
-            if(!has_path(a, b)) {
-                grafo[a].push_back(b);
-            }
-        }
-        bool has_path(int a, int b) {
-            return find(grafo[a].begin(), grafo[a].end(), b) != grafo[a].end();
+        void set_grafo(vector<Vertice> vertices) {
+            this->vertices = vertices;
         }
 
-        void show() {
+        vector<Vertice> get_vertices() {
+            return this->vertices;
+        }
+
+        void set_vertice(Vertice vertice) {
+            this->vertices.push_back(vertice);
+        }
+
+        int achaPosicao(int id);
+
+        void arestaDirecionada(int a, int b);
+
+       /* void show() {
             for(int i = 0; i < grafo.size(); i++) {
                 cout << "[" << i << "]: ";
                 for(int j = 0; j < grafo[i].size(); j++) {
@@ -33,7 +81,7 @@ class Grafo {
                 }
                 cout << endl;
             }
-        }
+        }*/
 };
 
 #endif

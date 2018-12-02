@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Grafo grafo(1005);
+Grafo grafo;
 
 bool read() {
     fstream file;
@@ -23,7 +23,7 @@ bool read() {
         file >> line;
         int b = stof(line);
 
-        grafo.make_path(a, b);
+        grafo.arestaDirecionada(a, b);
     }
 
     return true;

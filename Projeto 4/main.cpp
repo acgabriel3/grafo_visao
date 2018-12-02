@@ -9,7 +9,7 @@ int main() {
         return 0;
     }
 
-    grafo.show();
+    //grafo.show();
 
     return 0;
 }
