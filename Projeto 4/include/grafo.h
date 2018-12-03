@@ -172,6 +172,9 @@ class Grafo {
 
         void encontraComunidades();
 
+        //Funcao temporaria
+        void TesteMetodos();
+
 };
 
 #endif

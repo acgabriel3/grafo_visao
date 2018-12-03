@@ -126,7 +126,7 @@ void Grafo::computaA(Comunidade comunidade) {
 
 }
 
-int Grafo::computaQ() {
+int Grafo::computaQ(vector<Comunidade> comunidade) {
 
     double porcentagemAtual;
     double Q;
@@ -137,6 +137,48 @@ int Grafo::computaQ() {
     }
 
     return Q;
+
+}
+
+void Grafo::TesteMetodos() {
+
+
+}
+
+void Grafo::encontraComunidades() {
+
+    //Usar vetor auxiliar para Q. Portanto um vetor de comunidades auxiliar e um int Q com o peso de Q na determinada iteracao.
+    //Ao final das iteracoes do algoritmo, o maior Q jah estarah selecionado
+
+    double maiorQ = numeric_limits<double>::min();
+    vector<Comunidade> comunidadesMaiorQ;
+    vector<Comunidade> comunidadesMaiorQIteracao;
+
+    int iteracoes = this->vertices.size();
+
+    //Todo vertice eh uma comunidade:
+
+    for(for auto vertice : this->vertices) {
+        this->set_comunidade(vertice);
+    }
+
+    for(int i = 0; i < iteracoes; i++) {
+
+        double maiorQIteracao = numeric_limits<double>::min();
+        vector<Comunidade> auxComunidade = this->comunidades;
+
+        for(int posComunidadeIteracao = 0; posComunidadeIteracao < auxComunidade.size(); posComunidadeIteracao++)   {
+            Comunidade aux; //Servira para fazer a uniao das comunidades sem alterar o vetor de fato
+
+            //Fazer a uniao somente com as comunidades que possuem Q como adjascente
+
+            vector<Comunidade> adjascentes;
+
+
+        }
+
+    }
+
 
 }
 
