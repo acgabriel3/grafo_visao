@@ -80,22 +80,77 @@ bool Grafo::leitura() {
     return true;
 }
 
-int Grafo::computaEIJ(Comunidade comunidadeA, Comunidade comunidadeB) {
+void Grafo::calculaTotalArestas() {
+
+    this->totalArestas = 0;
+
+    for(auto vertice : this->vertices) {
+        this->totalArestas += vertice.get_adjascentes().size();
+    }
+
+}
+
+double Grafo::computaEIJ(Comunidade comunidadeA, Comunidade comunidadeB) {
+
+    double porcentagemSaida;
 
     if(this->totalArestas == 0) {
       this->calculaTotalArestas();
     }
 
-    for(auto verticeA : comunidadeA.get_vertices()) {
+    vector<Vertice> verticesB = comunidadeB.get_vertices();
 
+    int arestasSaindo = 0;
+
+    for(auto verticeA : comunidadeA.get_vertices()) {
+        if (find(verticesB.begin(), verticesB.end(), verticeA) < verticesB.end()) {
+            arestasSaindo++;
+        }
     }
+
+    porcentagemSaida = arestasSaindo/this->totalArestas;
+
+    return porcentagemSaida;
+
+}
+
+void Grafo::computaA(Comunidade comunidade) {
+
+    double A = 0;
+
+    for(auto comunidadeB : this->comunidades) {
+        A += this->computaEIJ(comunidade, comunidadeB);
+    }
+
+    comunidades[find(this->comunidades.begin(), this->comunidades.end(), comunidade) - this->comunidades.begin()].set_A(A);
+
+}
+
+int Grafo::computaQ() {
+
+    double porcentagemAtual;
+    double Q;
+
+    for(auto comunidade : this->comunidades) {
+        porcentagemAtual = this->computaEIJ(comunidade, comunidade);
+        Q += porcentagemAtual - (comunidade.get_A() * comunidade.get_A());
+    }
+
+    return Q;
 
 }
 
 
+//**************************************************************Funcoes De comunidade**************************************************
+//OBS: Idealmente deveria haver um arquivo para cada uma dessa classe. Treinar isso nos proximo projetos.
 
+void Comunidade::uniaoComunidades(Comunidade comunidade) {
 
+    for(auto vertice : comunidade.get_vertices()) {
+        this->set_vertice(vertice);
+    }
 
+}
 
 
 

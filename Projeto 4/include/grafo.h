@@ -34,7 +34,7 @@ class Vertice {
             return this->nome;
         }
 
-        void set_adjascentes(vector<Vertice> adjascenteDest) {
+        void set_adjascentes(vector<Vertice>& adjascenteDest) {
             this->adjascenteDest = adjascenteDest;
         }
 
@@ -42,11 +42,10 @@ class Vertice {
             return this->adjascenteDest;
         }
 
-        void set_adjascente(Vertice vertice) {
+        void set_adjascente(Vertice& vertice) {
             this->adjascenteDest.push_back(vertice);
         }
 
-        // adicionei os operadores pro vertice, para que o find funcione corretamente
         bool operator==(const Vertice& rhs) const {
             return this->id == rhs.get_id();
         }
@@ -65,7 +64,11 @@ class Comunidade {
 
     private:
 
+        int id;
+
         vector<Vertice> vertices;
+
+        double A;
 
     public:
 
@@ -73,12 +76,41 @@ class Comunidade {
             return this->vertices;
         }
 
-        void set_vertices(vector<Vertice> vertices) {
+        void set_vertices(vector<Vertice>& vertices) {
             this->vertices = vertices;
         }
 
-        void set_vertice(Vertice vertice) {
+        void set_vertice(Vertice& vertice) {
             this->vertices.push_back(vertice);
+        }
+
+        int get_id() const {
+            return this->id;
+        }
+
+        void set_id(double id) {
+            this->id = id;
+        }
+
+        double get_A() {
+            return this->A;
+        }
+
+        void set_A(int A) {
+            this->A = A;
+        }
+
+        bool operator==(const Comunidade& rhs) const {
+            return this->id == rhs.get_id();
+        }
+        bool operator!=(const Comunidade& rhs) const {
+            return this->id != rhs.get_id();
+        }
+        bool operator>(const Comunidade& rhs) const {
+            return this->id > rhs.get_id();
+        }
+        bool operator<(const Comunidade& rhs) const {
+            return this->id < rhs.get_id();
         }
 
         void uniaoComunidades(Comunidade comunidade);
@@ -98,7 +130,7 @@ class Grafo {
 
         Grafo() {}
 
-        void set_vertices(vector<Vertice> vertices) {
+        void set_vertices(vector<Vertice>& vertices) {
             this->vertices = vertices;
         }
 
@@ -106,11 +138,11 @@ class Grafo {
             return this->vertices;
         }
 
-        void set_vertice(Vertice vertice) {
+        void set_vertice(Vertice& vertice) {
             this->vertices.push_back(vertice);
         }
 
-        void set_comunidades(vector<Comunidade> comunidades) {
+        void set_comunidades(vector<Comunidade>& comunidades) {
             this->comunidades = comunidades;
         }
 
@@ -118,7 +150,7 @@ class Grafo {
             return this->comunidades;
         }
 
-        void set_comunidade(Comunidade comunidade) {
+        void set_comunidade(Comunidade& comunidade) {
             this->comunidades.push_back(comunidade);
         }
 
@@ -130,8 +162,15 @@ class Grafo {
 
         bool leitura();
 
-        int computaEIJ(Comunidade comunidadeA, Comunidade comunidadeB);
+        void calculaTotalArestas();
 
+        double computaEIJ(Comunidade comunidadeA, Comunidade comunidadeB);
+
+        void computaA(Comunidade comunidade);
+
+        int computaQ();
+
+        void encontraComunidades();
 
 };
 
